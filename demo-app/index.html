@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Effectiveness Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand-block">
+        <p class="eyebrow">Mock Demo</p>
+        <h1>FlowScope</h1>
+        <p class="brand-copy">
+          Balanced engineering effectiveness without toxic KPI.
+        </p>
+      </div>
+
+      <nav class="screen-nav" aria-label="MVP screens">
+        <button class="nav-button active" data-screen="overview">01 Overview</button>
+        <button class="nav-button" data-screen="delivery">02 Delivery &amp; Quality</button>
+        <button class="nav-button" data-screen="health">03 Team Health</button>
+        <button class="nav-button" data-screen="insights">04 Insights &amp; Actions</button>
+        <button class="nav-button" data-screen="guardrails">05 KPI Guardrails</button>
+      </nav>
+
+      <section class="sidebar-panel">
+        <p class="panel-label">Demo Story</p>
+        <p id="story-summary" class="panel-copy"></p>
+      </section>
+
+      <section class="sidebar-panel">
+        <p class="panel-label">Connected Sources</p>
+        <div id="source-list" class="source-list"></div>
+      </section>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Team Alpha</p>
+          <h2 id="screen-title">Overview</h2>
+          <p id="screen-subtitle" class="subtitle"></p>
+        </div>
+        <div class="topbar-meta">
+          <span class="meta-chip">Mocked integrations</span>
+          <span class="meta-chip">3-sprint narrative</span>
+          <span class="meta-chip">Team-level only</span>
+        </div>
+      </header>
+
+      <section id="overview" class="screen active" aria-labelledby="screen-title">
+        <div class="hero-card">
+          <div>
+            <p class="hero-kicker">Balanced team effectiveness</p>
+            <h3 id="hero-headline"></h3>
+            <p id="hero-copy" class="hero-copy"></p>
+          </div>
+          <div class="hero-callout">
+            <p class="callout-label">Top Recommendation</p>
+            <p id="top-recommendation" class="callout-copy"></p>
+          </div>
+        </div>
+
+        <div id="pillar-grid" class="pillar-grid"></div>
+
+        <div class="two-column">
+          <article class="card">
+            <div class="card-header">
+              <div>
+                <p class="section-kicker">Risk signals</p>
+                <h3>What needs attention</h3>
+              </div>
+            </div>
+            <ul id="risk-list" class="signal-list"></ul>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <div>
+                <p class="section-kicker">Context markers</p>
+                <h3>What changed around the team</h3>
+              </div>
+            </div>
+            <div id="context-list" class="context-list"></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="delivery" class="screen" aria-labelledby="screen-title">
+        <div id="delivery-metrics" class="metric-grid"></div>
+
+        <div class="two-column">
+          <article class="card chart-card">
+            <div class="card-header">
+              <div>
+                <p class="section-kicker">Trend view</p>
+                <h3>Delivery flow</h3>
+              </div>
+            </div>
+            <div id="delivery-chart" class="chart-wrap"></div>
+          </article>
+
+          <article class="card chart-card">
+            <div class="card-header">
+              <div>
+                <p class="section-kicker">Trend view</p>
+                <h3>Quality pressure</h3>
+              </div>
+            </div>
+            <div id="quality-chart" class="chart-wrap"></div>
+          </article>
+        </div>
+
+        <article class="card">
+          <div class="card-header">
+            <div>
+              <p class="section-kicker">Sprint breakdown</p>
+              <h3>Operational signals by sprint</h3>
+            </div>
+          </div>
+          <div class="table-scroll">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Sprint</th>
+                  <th>Throughput</th>
+                  <th>Cycle time</th>
+                  <th>Lead time</th>
+                  <th>Review time</th>
+                  <th>Deployments</th>
+                  <th>Escaped defects</th>
+                  <th>Urgent work</th>
+                </tr>
+              </thead>
+              <tbody id="delivery-table"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <section id="health" class="screen" aria-labelledby="screen-title">
+        <div class="privacy-banner">
+          Survey results are aggregated at team level. No individual answers are shown or used for performance review.
+        </div>
+
+        <div id="health-metrics" class="metric-grid health-grid"></div>
+
+        <div class="two-column">
+          <article class="card chart-card">
+            <div class="card-header">
+              <div>
+                <p class="section-kicker">Pulse trend</p>
+                <h3>Team experience over time</h3>
+              </div>
+            </div>
+            <div id="health-chart" class="chart-wrap"></div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <div>
+                <p class="section-kicker">Comment themes</p>
+                <h3>What the team is saying</h3>
+              </div>
+            </div>
+            <div id="comment-list" class="comment-list"></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="insights" class="screen" aria-labelledby="screen-title">
+        <div id="insight-grid" class="insight-grid"></div>
+
+        <article class="card">
+          <div class="card-header">
+            <div>
+              <p class="section-kicker">Action planner</p>
+              <h3>Recommended next actions</h3>
+            </div>
+          </div>
+          <div id="action-plan" class="action-plan"></div>
+        </article>
+      </section>
+
+      <section id="guardrails" class="screen" aria-labelledby="screen-title">
+        <div class="guardrail-intro">
+          <article class="hero-card compact">
+            <div>
+              <p class="hero-kicker">Trust-first measurement</p>
+              <h3>Metrics are for team improvement, not individual ranking</h3>
+              <p class="hero-copy">
+                FlowScope explains why certain KPI shortcuts are harmful and offers safer team-level alternatives.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div id="antipattern-grid" class="antipattern-grid"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
