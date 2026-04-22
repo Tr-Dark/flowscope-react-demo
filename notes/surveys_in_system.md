@@ -52,6 +52,64 @@ Instead, they should be:
 
 We should use a 3-layer survey system.
 
+## Who creates the surveys
+
+The best concept is not:
+- every manager writes their own random survey,
+- HR fully owns the questions,
+- the team has no control over what is asked.
+
+The best concept is a governed model with 3 levels of ownership.
+
+### 1. Product-defined core templates
+
+These are created by the system design itself.
+In our concept, the platform should include ready-made survey templates based on good measurement practice.
+
+Examples:
+- pulse survey template,
+- quarterly team health template,
+- release confidence mini survey,
+- tooling friction mini survey.
+
+Why this matters:
+- keeps quality consistent,
+- prevents bad or manipulative questions,
+- makes results comparable over time.
+
+### 2. Organization-level customization
+
+This should be done by a limited owner inside the company, for example:
+- HR / People partner,
+- Engineering Operations,
+- DevEx / Platform team,
+- Head of Engineering delegate.
+
+Their job should be:
+- choose which templates are active,
+- slightly adapt wording,
+- add a few company-specific questions,
+- define cadence and anonymity rules.
+
+Important:
+- they should customize within limits,
+- not build completely uncontrolled surveys from scratch every week.
+
+### 3. Team-level optional add-ons
+
+Team Leads or Engineering Managers may add:
+- 1 or 2 temporary questions,
+- only for a limited period,
+- only around a specific change or issue.
+
+Examples:
+- after a process change,
+- after release pressure,
+- after switching tools,
+- after changing on-call rotation.
+
+This keeps the system flexible without destroying comparability.
+
 ### Layer 1: Pulse survey
 
 Frequency:
@@ -62,6 +120,11 @@ Length:
 
 Purpose:
 - catch fast changes in workload, clarity, friction, and morale
+
+Recommended ownership:
+- standard template from the product,
+- cadence configured by org admin,
+- results viewed by team lead / manager in aggregated form.
 
 Examples:
 - I had enough uninterrupted time to do meaningful work.
@@ -79,6 +142,11 @@ Length:
 
 Purpose:
 - measure deeper patterns and compare change over time
+
+Recommended ownership:
+- prepared by the product template library,
+- reviewed or activated by engineering leadership / People / DevEx,
+- used for team-level and org-level improvement themes.
 
 Suggested topics:
 - planning clarity
@@ -104,6 +172,90 @@ Length:
 
 Purpose:
 - understand impact of a specific change
+
+Recommended ownership:
+- initiated by team lead, DevEx, or project owner,
+- based on a small approved template,
+- active only for a short time window.
+
+## Are surveys permanent or changing?
+
+The best answer is:
+
+some survey parts should be stable, and some should be flexible.
+
+### What should stay constant
+
+Core pulse questions should stay mostly constant for a longer period, for example:
+- one semester in the project,
+- one quarter in a real company.
+
+This is necessary because:
+- trends only make sense if the same thing is measured consistently;
+- managers need comparability;
+- teams need to understand the survey rhythm.
+
+Good candidates for stable questions:
+- focus time,
+- clarity of priorities,
+- workload sustainability,
+- workflow/tooling friction.
+
+### What can change
+
+Small optional modules can change depending on context.
+
+Examples:
+- release readiness,
+- incident pressure,
+- code review quality,
+- onboarding experience,
+- new process feedback.
+
+This gives flexibility without breaking trend analysis.
+
+## Recommended survey cadence model
+
+The most realistic model for our concept:
+
+- Pulse survey:
+  - recurring,
+  - short,
+  - mostly fixed questions.
+- Deep survey:
+  - recurring,
+  - longer,
+  - mostly fixed with a few configurable sections.
+- Event-based mini survey:
+  - temporary,
+  - specific to one issue,
+  - disappears after the event.
+
+## Recommended product rule
+
+The platform should not allow unlimited uncontrolled survey creation.
+
+Better rule:
+- core templates are built into the platform,
+- admins can configure them,
+- managers can add only limited temporary modules,
+- privacy and anonymity rules always remain enforced.
+
+## Why this is the strongest concept
+
+If surveys are fully fixed forever:
+- the product becomes rigid,
+- it misses local context.
+
+If surveys are fully custom all the time:
+- results become incomparable,
+- managers may ask biased questions,
+- trust drops.
+
+So the best model is:
+- stable core,
+- flexible add-ons,
+- governed ownership.
 
 ## Recommended survey topics
 
