@@ -1,0 +1,8 @@
+# Office temp files
+~$*.docx
+~$*.pptx
+~$*.xlsx
+
+# OS noise
+Thumbs.db
+.DS_Store
