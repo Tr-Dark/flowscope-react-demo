@@ -1,63 +1,63 @@
-# Demo App
+# Demo aplikacji
 
-## What this is
+## Czym to jest
 
-This is a frontend-only MVP demo for the project concept:
+To jest frontendowe demo MVP dla koncepcji projektu:
 
-measuring IT team effectiveness without demotivating employees.
+mierzenie efektywności zespołów IT bez demotywowania pracowników.
 
-The demo uses mocked data only.
-No backend or real integrations are required.
+Demo używa wyłącznie mockowanych danych.
+Nie wymaga backendu ani prawdziwych integracji.
 
-## How to open it
+## Jak uruchomić
 
-Open:
+Otwórz:
 
 - `demo-app/index.html`
 
-in any modern browser.
+w dowolnej nowoczesnej przeglądarce.
 
-## What the demo shows
+## Co pokazuje demo
 
-The demo is structured around 5 MVP screens:
+Demo jest zbudowane wokół 5 ekranów MVP:
 
-1. Overview
-2. Delivery & Quality
-3. Team Health
-4. Insights & Actions
-5. KPI Guardrails
+1. Przegląd
+2. Delivery i Jakość
+3. Kondycja Zespołu
+4. Insighty i Działania
+5. Guardrails KPI
 
-## Mock story
+## Scenariusz mockowy
 
-The whole demo is built around one realistic narrative:
+Całe demo opiera się na jednym realistycznym scenariuszu:
 
-- Team Alpha is pushed to release faster,
-- throughput increases,
-- review time drops,
-- escaped defects rise,
-- urgent work grows,
-- survey signals show lower focus and less sustainable workload.
+- Zespół Alpha zostaje dociśnięty do szybszych release'ów,
+- throughput rośnie,
+- czas review spada,
+- rośnie liczba defektów po wdrożeniu,
+- zwiększa się praca pilna,
+- sygnały z ankiet pokazują mniejszy fokus i gorsze workload sustainability.
 
-The purpose of the demo is to show that one metric alone can be misleading.
+Celem demo jest pokazanie, że jedna metryka sama w sobie może prowadzić do błędnych wniosków.
 
-## Fake integrations used in the story
+## Mockowane integracje użyte w historii
 
 - GitHub
 - Jira
 - Slack
 
-These are mocked as product data sources.
+Są one pokazane jako źródła danych produktu.
 
-## Recommended presentation flow
+## Rekomendowany przebieg prezentacji
 
-1. Start on Overview.
-2. Show that the team looks mixed, not simply successful or failing.
-3. Move to Delivery & Quality and point out the throughput vs defects tension.
-4. Move to Team Health and show how survey signals explain the human side.
-5. Move to Insights & Actions and show the interpretation layer.
-6. Finish on KPI Guardrails to explain how the product avoids toxic KPI use.
+1. Zacznij od ekranu Przegląd.
+2. Pokaż, że sytuacja zespołu jest mieszana, a nie po prostu dobra albo zła.
+3. Przejdź do Delivery i Jakość i wskaż napięcie między throughput a defektami.
+4. Przejdź do Kondycji Zespołu i pokaż, jak ankiety wyjaśniają ludzki kontekst.
+5. Przejdź do Insightów i Działań i pokaż warstwę interpretacji.
+6. Zakończ ekranem Guardrails KPI, aby wyjaśnić, jak produkt unika toksycznego użycia KPI.
 
-## Important concept message
+## Najważniejszy komunikat koncepcyjny
 
-This product is not a survey-only app and not an employee surveillance tool.
-It combines operational engineering metrics, lightweight surveys, and interpretation guidance at team level.
+Ten produkt nie jest aplikacją opartą wyłącznie na ankietach i nie jest narzędziem do nadzoru pracowników.
+Łączy operacyjne metryki engineering, lekkie ankiety oraz warstwę interpretacji na poziomie zespołu.

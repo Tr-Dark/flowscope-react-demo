@@ -1,71 +1,71 @@
 const mockData = {
   productName: "FlowScope",
-  teamName: "Team Alpha",
-  periodLabel: "Last 3 sprints",
+  teamName: "Zespół Alpha",
+  periodLabel: "Ostatnie 3 sprinty",
   hero: {
-    headline: "A team that looks faster on paper is quietly becoming less healthy.",
+    headline: "Zespół, który na papierze przyspiesza, w praktyce zaczyna działać mniej zdrowo.",
     copy:
-      "This mock demo combines GitHub, Jira, and Slack signals to show why raw output alone is not a reliable measure of engineering effectiveness."
+      "To demo łączy sygnały z GitHub, Jira i Slack, aby pokazać, dlaczego sam wzrost outputu nie jest wiarygodną miarą efektywności engineering."
   },
   storySummary:
-    "Leadership pushed for faster releases. Throughput rose, but review depth, quality, and team sustainability weakened across the same period.",
+    "Zespół został dociśnięty do szybszego release tempo. Throughput wzrósł, ale jakość, głębokość review i sustainability zespołu pogorszyły się w tym samym okresie.",
   sources: [
-    { name: "GitHub", note: "PRs, review flow, merge timing" },
-    { name: "Jira", note: "Cycle time, throughput, urgent work" },
-    { name: "Slack", note: "Pulse survey and check-ins" }
+    { name: "GitHub", note: "PR-y, flow review i timing merge" },
+    { name: "Jira", note: "Cycle time, throughput i praca pilna" },
+    { name: "Slack", note: "Pulse survey i check-iny" }
   ],
   pillars: [
     {
-      name: "Delivery Flow",
+      name: "Przepływ Delivery",
       score: 74,
       status: "caution",
       trend: "+21% throughput",
-      description: "Work is moving faster, but flow is becoming more fragile."
+      description: "Praca porusza się szybciej, ale cały flow staje się bardziej kruchy."
     },
     {
-      name: "Quality & Stability",
+      name: "Jakość i Stabilność",
       score: 42,
       status: "investigate",
-      trend: "+167% escaped defects",
-      description: "Quality deterioration suggests speed is being bought at a cost."
+      trend: "+167% defektów po wdrożeniu",
+      description: "Spadek jakości sugeruje, że prędkość jest kupowana kosztem stabilności."
     },
     {
-      name: "Predictability & Focus",
+      name: "Przewidywalność i Fokus",
       score: 48,
       status: "investigate",
-      trend: "+12 pts urgent work",
-      description: "Interrupt pressure is rising and planning is less stable."
+      trend: "+12 pkt pracy pilnej",
+      description: "Rośnie presja wynikająca z interruptów, a planowanie staje się mniej stabilne."
     },
     {
-      name: "Team Health",
+      name: "Kondycja Zespołu",
       score: 56,
       status: "caution",
       trend: "-23% focus pulse",
-      description: "Team members report less focus time and less sustainable workload."
+      description: "Członkowie zespołu zgłaszają mniej czasu na fokus i mniej zrównoważone workload."
     }
   ],
   riskSignals: [
     {
-      title: "Quality is worsening behind stronger throughput",
-      body: "Escaped defects increased from 3 to 8 while throughput rose from 28 to 34."
+      title: "Jakość pogarsza się mimo lepszego throughput",
+      body: "Defekty po wdrożeniu wzrosły z 3 do 8, podczas gdy throughput zwiększył się z 28 do 34."
     },
     {
-      title: "Review time dropped too fast",
-      body: "Review time fell from 21h to 12h, which may signal compressed review depth."
+      title: "Czas review spadł zbyt szybko",
+      body: "Czas review spadł z 21h do 12h, co może oznaczać spłycenie procesu review."
     },
     {
-      title: "Urgent work is crowding out planned work",
-      body: "Unplanned work and interrupt load increased for two sprints in a row."
+      title: "Praca pilna wypiera pracę planowaną",
+      body: "Unplanned work i interrupt load rosną już drugi sprint z rzędu."
     }
   ],
   contextMarkers: [
-    "Release acceleration target",
-    "Two urgent customer escalations",
-    "Shared reviewer became on-call lead",
-    "Planning priorities changed mid-sprint"
+    "Cel przyspieszenia release'ów",
+    "Dwie pilne eskalacje od klientów",
+    "Główny reviewer przejął dyżur on-call",
+    "Zmiana priorytetów w połowie sprintu"
   ],
   recommendation:
-    "Reduce interrupt work for one sprint, rebalance reviewer load, and protect focus blocks before pushing for more output.",
+    "Ogranicz pracę przerywaną na jeden sprint, rozłóż review load bardziej równomiernie i zabezpiecz bloki fokusowe zanim zespół zostanie znów dociśnięty do większego outputu.",
   sprints: [
     {
       name: "Sprint 1",
@@ -116,209 +116,209 @@ const mockData = {
   deliveryMetrics: [
     {
       label: "Throughput",
-      value: "34 items",
+      value: "34 elementy",
       trend: "+21% vs Sprint 2",
       status: "healthy",
       source: ["Jira"],
-      note: "Completed work items per sprint"
+      note: "Liczba ukończonych elementów pracy w sprincie"
     },
     {
       label: "Cycle Time",
-      value: "6.4 days",
-      trend: "+1.1 days",
+      value: "6.4 dnia",
+      trend: "+1.1 dnia",
       status: "caution",
       source: ["Jira"],
-      note: "Time from active work to done"
+      note: "Czas od rozpoczęcia pracy do zakończenia"
     },
     {
       label: "Lead Time",
-      value: "8.9 days",
-      trend: "+1.8 days",
+      value: "8.9 dnia",
+      trend: "+1.8 dnia",
       status: "caution",
       source: ["GitHub", "Jira"],
-      note: "Request to delivered work"
+      note: "Czas od zgłoszenia potrzeby do dostarczenia"
     },
     {
-      label: "Review Time",
-      value: "12 hours",
+      label: "Czas Review",
+      value: "12 godzin",
       trend: "-43% vs Sprint 1",
       status: "investigate",
       source: ["GitHub"],
-      note: "Average PR review turnaround"
+      note: "Średni czas przejścia przez review PR-a"
     },
     {
       label: "Deployment Frequency",
-      value: "9 deploys",
+      value: "9 wdrożeń",
       trend: "+2 vs Sprint 2",
       status: "healthy",
       source: ["GitHub"],
-      note: "Deployments shipped in the sprint"
+      note: "Liczba wdrożeń w sprincie"
     },
     {
-      label: "Escaped Defects",
-      value: "8 defects",
+      label: "Defekty po wdrożeniu",
+      value: "8 defektów",
       trend: "+167% vs Sprint 2",
       status: "investigate",
       source: ["Jira"],
-      note: "Production issues found after release"
+      note: "Problemy wykryte dopiero po wdrożeniu"
     }
   ],
   healthMetrics: [
     {
       label: "Focus Time",
       value: "51 / 100",
-      trend: "-15 pts",
+      trend: "-15 pkt",
       status: "investigate",
-      source: ["Slack survey"],
-      note: "Enough uninterrupted time to do meaningful work"
+      source: ["Ankieta Slack"],
+      note: "Czy zespół ma dość nieprzerwanego czasu na sensowną pracę"
     },
     {
-      label: "Workload Sustainability",
+      label: "Zrównoważenie Workloadu",
       value: "42 / 100",
-      trend: "-19 pts",
+      trend: "-19 pkt",
       status: "investigate",
-      source: ["Slack survey"],
-      note: "Current workload feels sustainable"
+      source: ["Ankieta Slack"],
+      note: "Czy obecny workload jest odczuwany jako zrównoważony"
     },
     {
-      label: "Priority Clarity",
+      label: "Jasność Priorytetów",
       value: "58 / 100",
-      trend: "-11 pts",
+      trend: "-11 pkt",
       status: "caution",
-      source: ["Slack survey"],
-      note: "Team understands current sprint priorities"
+      source: ["Ankieta Slack"],
+      note: "Czy zespół rozumie priorytety bieżącego sprintu"
     },
     {
       label: "Tooling Friction",
       value: "63 / 100",
-      trend: "-2 pts",
+      trend: "-2 pkt",
       status: "caution",
-      source: ["Slack survey"],
-      note: "Tools support rather than slow down delivery"
+      source: ["Ankieta Slack"],
+      note: "Czy narzędzia wspierają pracę zamiast ją spowalniać"
     }
   ],
   comments: [
     {
-      tag: "Code review pressure",
-      text: "Reviews are faster, but they feel thinner. We are approving more PRs without enough time to look deeply."
+      tag: "Presja na code review",
+      text: "Review jest szybsze, ale też płytsze. Zatwierdzamy więcej PR-ów bez wystarczającego czasu na głębszą analizę."
     },
     {
       tag: "Interrupt load",
-      text: "Too many urgent requests are breaking sprint focus. Planned work keeps getting displaced."
+      text: "Za dużo pilnych zgłoszeń rozbija fokus sprintu. Praca planowana jest ciągle wypierana."
     },
     {
-      tag: "Planning clarity",
-      text: "Priorities changed more than once during the sprint, which made estimation and coordination harder."
+      tag: "Jasność planowania",
+      text: "Priorytety zmieniały się więcej niż raz w trakcie sprintu, co utrudniło estymację i koordynację."
     }
   ],
   insights: [
     {
-      title: "Speed vs quality imbalance",
+      title: "Brak równowagi między szybkością a jakością",
       status: "investigate",
       summary:
-        "The team is shipping more items, but the defect trend suggests that quality controls are under strain.",
+        "Zespół dostarcza więcej elementów, ale trend defektów sugeruje, że kontrola jakości jest przeciążona.",
       caution:
-        "Do not interpret rising throughput as pure improvement while defects and cycle time are moving in the wrong direction.",
-      evidence: ["Throughput +21%", "Defects +167%", "Cycle time +1.1 days"]
+        "Nie interpretuj wzrostu throughput jako czystej poprawy, gdy defekty i cycle time idą w złym kierunku.",
+      evidence: ["Throughput +21%", "Defekty +167%", "Cycle time +1.1 dnia"]
     },
     {
-      title: "Review compression risk",
+      title: "Ryzyko kompresji review",
       status: "caution",
       summary:
-        "Review time dropped sharply while releases accelerated, which may indicate reduced review depth or overloaded reviewers.",
+        "Czas review gwałtownie spadł przy jednoczesnym przyspieszeniu release'ów, co może oznaczać płytsze review albo przeciążenie reviewerów.",
       caution:
-        "Fast review is not always healthy review. The system should inspect PR size, reviewer capacity, and release pressure together.",
-      evidence: ["Review time 24h -> 12h", "Deployments 5 -> 9", "Comment theme: shallow reviews"]
+        "Szybkie review nie zawsze oznacza dobre review. System powinien sprawdzić rozmiar PR-ów, capacity reviewerów i presję release'ów razem.",
+      evidence: ["Czas review 24h -> 12h", "Wdrożenia 5 -> 9", "Komentarz: płytkie review"]
     },
     {
-      title: "Sustainability warning",
+      title: "Ostrzeżenie o sustainability",
       status: "investigate",
       summary:
-        "Survey signals show less focus time, lower workload sustainability, and weaker clarity in the same period.",
+        "Sygnały z ankiet pokazują mniej czasu na fokus, słabsze workload sustainability i mniejszą jasność priorytetów w tym samym okresie.",
       caution:
-        "This looks like process pressure, not an individual performance issue. Use team-level interventions first.",
-      evidence: ["Focus 74 -> 51", "Workload 69 -> 42", "Urgent work 14 -> 26"]
+        "To wygląda na presję procesową, a nie problem wydajności pojedynczych osób. Najpierw stosuj działania na poziomie zespołu.",
+      evidence: ["Focus 74 -> 51", "Workload 69 -> 42", "Praca pilna 14 -> 26"]
     }
   ],
   actions: [
     {
-      title: "Protect focus blocks for one sprint",
+      title: "Zabezpiecz bloki fokusowe na jeden sprint",
       owner: "Engineering Manager",
-      reviewDate: "Next sprint review",
+      reviewDate: "Następny przegląd sprintu",
       body:
-        "Reserve no-meeting time and route urgent requests through one decision point to cut interrupt load."
+        "Wprowadź no-meeting time i przekieruj pilne zgłoszenia przez jeden punkt decyzyjny, aby ograniczyć interrupt load."
     },
     {
-      title: "Rebalance reviewer load",
+      title: "Rozłóż reviewer load bardziej równomiernie",
       owner: "Tech Lead",
-      reviewDate: "Within 2 weeks",
+      reviewDate: "W ciągu 2 tygodni",
       body:
-        "Distribute review ownership, flag oversized PRs, and avoid routing most reviews through one person."
+        "Rozdziel ownership review, oznaczaj zbyt duże PR-y i unikaj kierowania większości review do jednej osoby."
     },
     {
-      title: "Audit release pressure against defects",
+      title: "Sprawdź presję release'ów względem defektów",
       owner: "Delivery Lead",
-      reviewDate: "After next release",
+      reviewDate: "Po następnym release",
       body:
-        "Compare release frequency, PR size, and defect escape patterns to find the threshold where speed harms stability."
+        "Porównaj częstotliwość release'ów, rozmiar PR-ów i wzorce ucieczki defektów, aby znaleźć moment, w którym szybkość zaczyna szkodzić stabilności."
     }
   ],
   antiPatterns: [
     {
       title: "Commits per developer",
       whyBad:
-        "Encourages noisy activity instead of meaningful progress and ignores complexity, pairing, and review work.",
+        "Promuje głośną aktywność zamiast realnego postępu i ignoruje złożoność pracy, pairing oraz review.",
       saferAlternative:
-        "Use team throughput, lead time, and quality together with context markers.",
-      rule: "Never use as an individual ranking metric."
+        "Używaj team throughput, lead time i jakości razem ze znacznikami kontekstu.",
+      rule: "Nigdy nie używaj jako metryki rankingu indywidualnego."
     },
     {
       title: "Lines of code written",
       whyBad:
-        "Rewards volume over clarity and can punish refactoring, deletion, or simplification.",
+        "Nagradza objętość zamiast jakości i może karać refactoring, usuwanie kodu albo upraszczanie rozwiązania.",
       saferAlternative:
-        "Use escaped defects, review quality, and delivery outcomes instead.",
-      rule: "Treat code volume as a technical artifact, not a productivity signal."
+        "Lepiej używać defektów po wdrożeniu, jakości review i outcome'ów delivery.",
+      rule: "Traktuj objętość kodu jako artefakt techniczny, a nie sygnał produktywności."
     },
     {
       title: "Tickets closed per person",
       whyBad:
-        "Pushes teams toward splitting work unnaturally and discourages collaboration on complex tasks.",
+        "Popycha zespoły do nienaturalnego rozbijania pracy i zniechęca do współpracy przy trudniejszych zadaniach.",
       saferAlternative:
-        "Track team throughput and work item mix, then discuss context around delivery pressure.",
-      rule: "Measure team flow, not personal ticket counts."
+        "Lepiej śledzić team throughput i mix typów pracy, a potem omawiać kontekst presji delivery.",
+      rule: "Mierz flow zespołu, a nie liczbę ticketów zamykanych przez osobę."
     },
     {
       title: "Story points per person",
       whyBad:
-        "Turns planning estimates into performance targets and invites gaming of estimation.",
+        "Zamienia estymacje planistyczne w target wydajności i zachęca do grania estymacją.",
       saferAlternative:
-        "Use sprint predictability and planned-vs-unplanned work at team level.",
-      rule: "Story points are for planning conversations, not personal output scoring."
+        "Lepiej używać przewidywalności sprintu i relacji planned-vs-unplanned work na poziomie zespołu.",
+      rule: "Story points służą rozmowie o planowaniu, a nie ocenianiu outputu pojedynczych osób."
     }
   ]
 };
 
 const screenMeta = {
   overview: {
-    title: "Overview",
-    subtitle: "A balanced snapshot of team effectiveness across delivery, quality, focus, and wellbeing."
+    title: "Przegląd",
+    subtitle: "Zbalansowany obraz efektywności zespołu w obszarach delivery, jakości, fokusu i wellbeing."
   },
   delivery: {
-    title: "Delivery & Quality",
-    subtitle: "Operational metrics from GitHub and Jira show where flow improves and where quality begins to slip."
+    title: "Delivery i Jakość",
+    subtitle: "Metryki operacyjne z GitHub i Jira pokazują, gdzie flow się poprawia, a gdzie zaczyna spadać jakość."
   },
   health: {
-    title: "Team Health",
-    subtitle: "Lightweight survey signals explain the human context behind the operational changes."
+    title: "Kondycja Zespołu",
+    subtitle: "Lekkie sygnały z ankiet pokazują ludzki kontekst stojący za zmianami operacyjnymi."
   },
   insights: {
-    title: "Insights & Actions",
-    subtitle: "The interpretation layer connects metrics and feedback into concrete next steps."
+    title: "Insighty i Działania",
+    subtitle: "Warstwa interpretacji łączy metryki i feedback w konkretne kolejne kroki."
   },
   guardrails: {
-    title: "KPI Guardrails",
-    subtitle: "This system is built to improve teams, not to rank individual employees."
+    title: "Guardrails KPI",
+    subtitle: "Ten system został zaprojektowany, by rozwijać zespoły, a nie tworzyć rankingi pracowników."
   }
 };
 
@@ -443,7 +443,7 @@ function renderInsights() {
             ${insight.evidence.map((item) => `<span>${item}</span>`).join("")}
           </div>
           <div>
-            <strong>Caution</strong>
+            <strong>Uwaga</strong>
             <span class="small-note">${insight.caution}</span>
           </div>
         </article>
@@ -457,8 +457,8 @@ function renderInsights() {
       (action) => `
         <div class="action-item">
           <strong>${action.title}</strong>
-          <span><strong>Owner</strong> ${action.owner}</span>
-          <span><strong>Review</strong> ${action.reviewDate}</span>
+          <span><strong>Właściciel</strong> ${action.owner}</span>
+          <span><strong>Przegląd</strong> ${action.reviewDate}</span>
           <span class="small-note">${action.body}</span>
         </div>
       `
@@ -474,9 +474,9 @@ function renderAntiPatterns() {
         <article class="antipattern-card">
           <h3>${item.title}</h3>
           <ul>
-            <li><strong>Why it is harmful:</strong> ${item.whyBad}</li>
-            <li><strong>Safer alternative:</strong> ${item.saferAlternative}</li>
-            <li><strong>Guardrail:</strong> ${item.rule}</li>
+            <li><strong>Dlaczego to szkodzi:</strong> ${item.whyBad}</li>
+            <li><strong>Bezpieczniejsza alternatywa:</strong> ${item.saferAlternative}</li>
+            <li><strong>Zasada ochronna:</strong> ${item.rule}</li>
           </ul>
         </article>
       `
@@ -502,13 +502,13 @@ function renderCharts() {
 
   renderLineChart("quality-chart", [
     {
-      label: "Escaped Defects",
+      label: "Defekty po wdrożeniu",
       color: "#b64736",
       values: mockData.sprints.map((item) => item.defects),
       suffix: ""
     },
     {
-      label: "Urgent Work",
+      label: "Praca pilna",
       color: "#c77813",
       values: mockData.sprints.map((item) => item.urgentWork),
       suffix: "%"
@@ -529,7 +529,7 @@ function renderCharts() {
       suffix: ""
     },
     {
-      label: "Priority Clarity",
+      label: "Jasność priorytetów",
       color: "#0f766e",
       values: mockData.sprints.map((item) => item.clarity),
       suffix: ""
@@ -604,7 +604,7 @@ function renderLineChart(targetId, series) {
     .join("");
 
   target.innerHTML = `
-    <svg class="chart-svg" viewBox="0 0 ${width} ${height}" role="img" aria-label="Trend chart">
+    <svg class="chart-svg" viewBox="0 0 ${width} ${height}" role="img" aria-label="Wykres trendu">
       ${gridMarkup}
       ${axisMarkup}
       ${seriesMarkup}
@@ -615,7 +615,12 @@ function renderLineChart(targetId, series) {
 }
 
 function formatStatus(status) {
-  return status.charAt(0).toUpperCase() + status.slice(1);
+  const labels = {
+    healthy: "Zdrowo",
+    caution: "Uwaga",
+    investigate: "Sprawdź"
+  };
+  return labels[status] || status;
 }
 
 function activateScreen(screenId) {
