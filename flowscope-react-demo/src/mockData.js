@@ -1,7 +1,8 @@
 export const appSummary = {
   organization: "Northstar Digital",
-  size: "180 osób w IT, 3 zespoły pokazowe",
+  size: "180 osób w IT, 3 zespoły produktowe",
   tooling: "GitHub + Jira + Slack + CI/CD",
+  stageStatus: "Etap 3: Integrations i Surveys",
   teams: [
     {
       name: "Team Alpha",
@@ -44,12 +45,12 @@ export const sections = [
       {
         name: "Integrations Overview",
         goal: "Pokazać aktywne integracje i typy zbieranych danych.",
-        status: "Planned"
+        status: "Implemented"
       },
       {
         name: "Add Integration",
         goal: "Pokazać, że produkt można rozbudować o nowe źródła danych.",
-        status: "Planned"
+        status: "Implemented"
       }
     ],
     dataPoints: [
@@ -57,11 +58,11 @@ export const sections = [
       "Throughput",
       "Cycle time",
       "Deployment frequency",
-      "Response delivery przez Slack"
+      "Survey delivery przez Slack"
     ],
     nextStep: {
-      title: "Zbudować widok statusów integracji",
-      body: "Potrzebujemy listy integracji, statusów połączenia, ostatniej synchronizacji i przypisanych metryk."
+      title: "Dodać mapowanie danych do ekranów Teams",
+      body: "Po ekranie integracji kolejnym krokiem będzie pokazanie, jak konkretne metryki z GitHub i Jira trafiają do dashboardu Team Alpha."
     }
   },
   {
@@ -84,17 +85,17 @@ export const sections = [
       {
         name: "Survey Overview",
         goal: "Pokazać wszystkie typy ankiet i wyróżnić Sprint Survey jako core.",
-        status: "Planned"
+        status: "Implemented"
       },
       {
         name: "Sprint Survey Builder",
         goal: "Pokazać kategorie pytań, częstotliwość i anonimowość.",
-        status: "Planned"
+        status: "Implemented"
       },
       {
         name: "Question Library",
         goal: "Pokazać gotowe pytania systemowe i podział na core vs optional.",
-        status: "Planned"
+        status: "Implemented"
       }
     ],
     dataPoints: [
@@ -106,8 +107,8 @@ export const sections = [
       "Response rate"
     ],
     nextStep: {
-      title: "Ustalić finalne pytania sprint survey",
-      body: "Przed implementacją buildera potrzebujemy zamknąć zestaw 5-6 pytań stałych i podział na kategorie."
+      title: "Podpiąć wyniki Sprint Survey do Team Detail",
+      body: "Po builderze i bibliotece pytań kolejnym etapem będzie pokazanie wyników ankiety po sprincie na poziomie konkretnych zespołów."
     }
   },
   {
@@ -234,3 +235,213 @@ export const sections = [
     }
   }
 ];
+
+export const integrationsOverview = {
+  summaryCards: [
+    { label: "Aktywne integracje", value: "4 / 4", note: "GitHub, Jira, Slack, CI/CD" },
+    { label: "Automatyczne metryki", value: "12", note: "Delivery, quality i predictability" },
+    { label: "Ostatnia synchronizacja", value: "08:42", note: "Dane odświeżone 6 min temu" },
+    { label: "Pokrycie organizacji", value: "3 zespoły", note: "Alpha, Beta, Gamma" }
+  ],
+  connected: [
+    {
+      name: "GitHub",
+      status: "connected",
+      owner: "Engineering Platform",
+      lastSync: "6 min temu",
+      description: "Źródło danych o PR-ach, review time i merge flow.",
+      metrics: ["PR review time", "Merge lead time", "PR size", "Review load"],
+      usage: "Używane do analizy delivery quality i przeciążenia reviewerów."
+    },
+    {
+      name: "Jira",
+      status: "connected",
+      owner: "Delivery Operations",
+      lastSync: "4 min temu",
+      description: "Źródło danych o przepływie pracy i stabilności sprintu.",
+      metrics: ["Throughput", "Cycle time", "Lead time", "Planned vs unplanned work"],
+      usage: "Używane do mierzenia flow, przewidywalności i presji pracy pilnej."
+    },
+    {
+      name: "Slack",
+      status: "connected",
+      owner: "People Ops + Team Leads",
+      lastSync: "Live",
+      description: "Kanał dostarczania Sprint Survey i zbierania odpowiedzi.",
+      metrics: ["Response rate", "Pulse answers", "Open comments", "Reminder delivery"],
+      usage: "Używany do warstwy feedbackowej po sprincie i do analizy komentarzy."
+    },
+    {
+      name: "CI/CD",
+      status: "connected",
+      owner: "Release Engineering",
+      lastSync: "11 min temu",
+      description: "Źródło danych o release stability i deployment frequency.",
+      metrics: ["Deployment frequency", "Failed deployments", "Release stability", "Rollback rate"],
+      usage: "Używane do wykrywania ryzyka jakościowego po przyspieszeniu release'ów."
+    }
+  ],
+  available: [
+    {
+      name: "GitLab",
+      category: "Repozytorium kodu",
+      preview: "MR review time, merge flow, branch activity",
+      note: "Alternatywa dla GitHub w organizacjach self-hosted."
+    },
+    {
+      name: "Linear",
+      category: "Work tracking",
+      preview: "Cycle time, issue flow, roadmap delivery",
+      note: "Dla zespołów produktowych pracujących poza Jira."
+    },
+    {
+      name: "Microsoft Teams",
+      category: "Survey delivery",
+      preview: "Pulse survey delivery, reminders, comment collection",
+      note: "Dla organizacji pracujących poza Slack."
+    },
+    {
+      name: "PagerDuty",
+      category: "Incident data",
+      preview: "Incident load, on-call pressure, MTTR",
+      note: "Dodatkowy kontekst jakości i stability dla zespołów produkcyjnych."
+    }
+  ],
+  mappingFlow: [
+    {
+      source: "GitHub + Jira",
+      output: "Cycle time, lead time, review pressure",
+      explanation: "Łączymy flow pracy z danymi o review, żeby zobaczyć czy zespół przyspiesza zdrowo."
+    },
+    {
+      source: "Jira + CI/CD",
+      output: "Throughput vs release stability",
+      explanation: "Wzrost liczby dostarczanych zadań zestawiamy z jakością release'ów i defektami po wdrożeniu."
+    },
+    {
+      source: "Slack survey + open comments",
+      output: "Workload, clarity, focus, comment themes",
+      explanation: "Krótki feedback po sprincie tłumaczy, dlaczego metryki delivery zaczynają wyglądać gorzej."
+    }
+  ]
+};
+
+export const surveysOverview = {
+  summaryCards: [
+    { label: "Aktywne szablony", value: "4", note: "Sprint, Release, Quarterly, Annual" },
+    { label: "Core questions", value: "6", note: "Stały zestaw pytań po sprincie" },
+    { label: "Średni response rate", value: "88%", note: "Na podstawie 3 ostatnich sprintów" },
+    { label: "AI suggestions", value: "Włączone", note: "Dla pytań tematycznych i komentarzy" }
+  ],
+  programs: [
+    {
+      name: "Sprint Survey",
+      cadence: "Po każdym sprincie",
+      length: "6 pytań + 1 komentarz",
+      owner: "Team Lead / Engineering Manager",
+      badge: "Core",
+      purpose: "Główne źródło szybkiego feedbacku jakościowego do analizy pracy zespołu."
+    },
+    {
+      name: "Release Survey",
+      cadence: "Warunkowo po ważnym release",
+      length: "4 pytania",
+      owner: "Release Lead",
+      badge: "Optional",
+      purpose: "Bada confidence, napięcie i jakość procesu wydawniczego po release."
+    },
+    {
+      name: "Quarterly Review",
+      cadence: "Raz na kwartał",
+      length: "10 pytań",
+      owner: "Engineering Ops / People",
+      badge: "Extended",
+      purpose: "Pozwala zobaczyć szersze trendy w procesie, współpracy i tooling."
+    },
+    {
+      name: "Annual Review",
+      cadence: "Raz w roku",
+      length: "14 pytań",
+      owner: "People Partner + Leadership",
+      badge: "Strategic",
+      purpose: "Daje szerszy przegląd kultury pracy, rozwoju i długofalowego wellbeing."
+    }
+  ],
+  sprintBuilder: {
+    cadence: "Automatycznie po zamknięciu sprintu",
+    anonymity: "Wyniki widoczne od minimum 5 odpowiedzi",
+    responseGoal: "Cel: 85% odpowiedzi w 24h",
+    categories: [
+      { name: "Workload", weight: "High", note: "Czy sprint był do utrzymania?" },
+      { name: "Focus Time", weight: "High", note: "Czy zespół miał czas na skupioną pracę?" },
+      { name: "Clarity", weight: "High", note: "Czy priorytety były jasne?" },
+      { name: "Review Quality", weight: "Medium", note: "Czy code review działało dobrze?" },
+      { name: "Tooling", weight: "Medium", note: "Czy narzędzia pomagały czy spowalniały?" },
+      { name: "Predictability", weight: "Medium", note: "Czy sprint był przewidywalny?" }
+    ],
+    questions: [
+      "Czy workload w tym sprincie był do utrzymania?",
+      "Czy zespół miał wystarczająco dużo czasu na skupioną pracę?",
+      "Czy priorytety sprintu były jasne od początku do końca?",
+      "Czy proces code review działał dobrze w tym sprincie?",
+      "Czy narzędzia wspierały pracę zamiast ją spowalniać?",
+      "Czy sprint był przewidywalny i dobrze zaplanowany?"
+    ]
+  },
+  library: [
+    {
+      category: "Team Health",
+      type: "Core",
+      examples: [
+        "Czy workload był do utrzymania?",
+        "Czy zespół miał energię do pracy przez cały sprint?",
+        "Czy tempo pracy było zdrowe?"
+      ]
+    },
+    {
+      category: "Delivery Experience",
+      type: "Core",
+      examples: [
+        "Czy sprint był przewidywalny?",
+        "Czy zespół dostarczał zgodnie z planem?",
+        "Czy zmiany w trakcie sprintu były pod kontrolą?"
+      ]
+    },
+    {
+      category: "Quality & Stability",
+      type: "Optional",
+      examples: [
+        "Czy release confidence był wysoki?",
+        "Czy jakość zmian była wystarczająca?",
+        "Czy tempo review nie obniżyło jakości?"
+      ]
+    },
+    {
+      category: "Collaboration",
+      type: "Optional",
+      examples: [
+        "Czy współpraca w zespole przebiegała sprawnie?",
+        "Czy zależności od innych zespołów blokowały pracę?",
+        "Czy blockerami zajmowano się wystarczająco szybko?"
+      ]
+    }
+  ],
+  aiSuggestions: [
+    {
+      prompt: "Chcę zbadać przeciążenie po release",
+      questions: [
+        "Czy ostatni release zwiększył napięcie w zespole bardziej niż zwykle?",
+        "Czy po release pojawiło się zbyt dużo pracy reaktywnej?",
+        "Czy zespół miał wystarczająco dużo czasu na quality checks przed wdrożeniem?"
+      ]
+    },
+    {
+      prompt: "Chcę zbadać jakość code review",
+      questions: [
+        "Czy review było wystarczająco dokładne, a nie tylko szybkie?",
+        "Czy reviewerzy mieli realnie czas na analizę zmian?",
+        "Czy tempo merge'ów nie wymuszało powierzchownego review?"
+      ]
+    }
+  ]
+};
