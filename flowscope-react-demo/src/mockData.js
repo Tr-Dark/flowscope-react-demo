@@ -2,7 +2,7 @@ export const appSummary = {
   organization: "Northstar Digital",
   size: "180 osób w IT, 3 zespoły produktowe",
   tooling: "GitHub + Jira + Slack + CI/CD",
-  stageStatus: "Etap 3: Integrations i Surveys",
+  stageStatus: "Etap 4: Teams Dashboard i Team Detail",
   teams: [
     {
       name: "Team Alpha",
@@ -130,12 +130,12 @@ export const sections = [
       {
         name: "Teams Dashboard",
         goal: "Pokazać status wszystkich zespołów i główne ryzyka.",
-        status: "Planned"
+        status: "Implemented"
       },
       {
         name: "Team Detail",
         goal: "Wejść głębiej w historię Team Alpha.",
-        status: "Planned"
+        status: "Implemented"
       }
     ],
     dataPoints: [
@@ -147,8 +147,8 @@ export const sections = [
       "Open comments themes"
     ],
     nextStep: {
-      title: "Zamknąć realistyczne dane dla 3 zespołów",
-      body: "Musimy przygotować spójne historie dla Alpha, Beta i Gamma, żeby dashboard organizacji miał sens."
+      title: "Przejść do gotowych insightów i rekomendacji",
+      body: "Mamy już dane organizacyjne i historię sprintów. Następny etap to ekran AI analysis, który połączy te sygnały w gotowe wnioski."
     }
   },
   {
@@ -161,11 +161,7 @@ export const sections = [
     heroTitle: "Tutaj produkt przestaje być dashboardem, a staje się narzędziem decyzyjnym.",
     heroCopy:
       "Na tym etapie użytkownik ma zobaczyć, że FlowScope nie tylko pokazuje liczby, ale tłumaczy, co się dzieje i co warto zrobić dalej.",
-    futureItems: [
-      "Insights Overview",
-      "Extended AI Analysis",
-      "Action Planner"
-    ],
+    futureItems: ["Insights Overview", "Extended AI Analysis", "Action Planner"],
     screens: [
       {
         name: "Insights Overview",
@@ -206,11 +202,7 @@ export const sections = [
     heroTitle: "Guardrails to nie dodatek. To część przewagi produktu.",
     heroCopy:
       "Ta sekcja ma pokazać, że FlowScope świadomie odcina się od narzędzi, które zamieniają ludzi w rankingi i tworzą presję opartą na złych KPI.",
-    futureItems: [
-      "KPI Guardrails",
-      "Survey Governance",
-      "Privacy rules"
-    ],
+    futureItems: ["KPI Guardrails", "Survey Governance", "Privacy rules"],
     screens: [
       {
         name: "KPI Guardrails",
@@ -444,4 +436,466 @@ export const surveysOverview = {
       ]
     }
   ]
+};
+
+export const teamsOverview = {
+  summaryCards: [
+    { label: "Zespoły healthy", value: "1 / 3", note: "Beta jest obecnie najbardziej stabilna" },
+    { label: "Zespoły do obserwacji", value: "2 / 3", note: "Alpha i Gamma mają mieszane sygnały" },
+    { label: "Średni response rate", value: "89%", note: "Po ostatnich 3 sprintach" },
+    { label: "Główny sygnał org", value: "Review pressure", note: "Najmocniej widoczne w Team Alpha" }
+  ],
+  dashboard: [
+    {
+      id: "alpha",
+      name: "Team Alpha",
+      mission: "Główna platforma klienta",
+      manager: "Marta Zielińska",
+      squadSize: "9 osób",
+      releaseWindow: "Release co 2 tygodnie",
+      responseRate: "92%",
+      pulse: "3.1 / 5",
+      status: "investigate",
+      statusLabel: "Investigate",
+      topRisk: "Rosnąca presja release i skrócone review",
+      topStrength: "Wysokie tempo delivery przy jasnych priorytetach",
+      metrics: [
+        { label: "Throughput", value: "34 pts", trend: "+13%", tone: "up" },
+        { label: "Cycle time", value: "5.6 d", trend: "+0.8 d", tone: "warning" },
+        { label: "Review time", value: "31 h", trend: "+9 h", tone: "warning" },
+        { label: "Defects", value: "5", trend: "+3", tone: "down" }
+      ]
+    },
+    {
+      id: "beta",
+      name: "Team Beta",
+      mission: "Platforma i integracje",
+      manager: "Tomasz Krawiec",
+      squadSize: "7 osób",
+      releaseWindow: "Release weekly",
+      responseRate: "86%",
+      pulse: "4.2 / 5",
+      status: "healthy",
+      statusLabel: "Healthy",
+      topRisk: "Zależności od infrastruktury poza zespołem",
+      topStrength: "Stabilny review flow i dobra przewidywalność sprintu",
+      metrics: [
+        { label: "Throughput", value: "22 pts", trend: "+2%", tone: "up" },
+        { label: "Cycle time", value: "3.2 d", trend: "-0.3 d", tone: "up" },
+        { label: "Review time", value: "12 h", trend: "-1 h", tone: "up" },
+        { label: "Defects", value: "1", trend: "0", tone: "steady" }
+      ]
+    },
+    {
+      id: "gamma",
+      name: "Team Gamma",
+      mission: "Nowe funkcje biznesowe",
+      manager: "Joanna Leśna",
+      squadSize: "8 osób",
+      releaseWindow: "Release co 3 tygodnie",
+      responseRate: "88%",
+      pulse: "3.6 / 5",
+      status: "caution",
+      statusLabel: "Caution",
+      topRisk: "Zbyt dużo zmian scope w trakcie sprintu",
+      topStrength: "Dobry throughput i szybkie dostarczanie nowych funkcji",
+      metrics: [
+        { label: "Throughput", value: "28 pts", trend: "+11%", tone: "up" },
+        { label: "Cycle time", value: "4.4 d", trend: "+0.5 d", tone: "warning" },
+        { label: "Review time", value: "18 h", trend: "+2 h", tone: "steady" },
+        { label: "Defects", value: "3", trend: "+1", tone: "warning" }
+      ]
+    }
+  ],
+  details: {
+    alpha: {
+      aiSummary:
+        "Team Alpha dowozi więcej pracy niż miesiąc temu, ale wzrost throughput idzie razem ze spadkiem focus time, dłuższym review time i większą liczbą defektów po release. To wygląda na zespół, który przyspieszył kosztem jakości i obciążenia.",
+      snapshot: [
+        {
+          label: "Aktualny status",
+          value: "Investigate",
+          note: "Presja release + spadek focus time",
+          tone: "investigate"
+        },
+        {
+          label: "Sprint pulse",
+          value: "3.1 / 5",
+          note: "Najniższy wynik w organizacji",
+          tone: "caution"
+        },
+        {
+          label: "Escaped defects",
+          value: "5",
+          note: "Wzrost po 2 ostatnich wdrożeniach",
+          tone: "investigate"
+        },
+        {
+          label: "Response rate",
+          value: "92%",
+          note: "Feedback jest wiarygodny",
+          tone: "healthy"
+        }
+      ],
+      surveyBreakdown: [
+        {
+          label: "Workload sustainability",
+          score: 2.8,
+          note: "Zespół sygnalizuje zbyt dużo pracy reaktywnej pod koniec sprintu.",
+          tone: "investigate"
+        },
+        {
+          label: "Focus time",
+          score: 2.9,
+          note: "Coraz więcej przerwań przez pilne poprawki i szybkie review.",
+          tone: "investigate"
+        },
+        {
+          label: "Clarity",
+          score: 4.1,
+          note: "Priorytety są jasne, problem nie leży w planowaniu celu sprintu.",
+          tone: "healthy"
+        },
+        {
+          label: "Review quality",
+          score: 3.0,
+          note: "Komentarze wskazują na pośpiech i review robione między spotkaniami.",
+          tone: "caution"
+        },
+        {
+          label: "Tooling support",
+          score: 3.6,
+          note: "Narzędzia są OK, ale release process jest męczący.",
+          tone: "caution"
+        }
+      ],
+      sprintHistory: [
+        {
+          name: "Sprint 24.06",
+          period: "18 mar - 29 mar",
+          throughput: "27 pts",
+          cycleTime: "4.4 d",
+          reviewTime: "22 h",
+          defects: "2",
+          workload: "3.6 / 5",
+          focus: "3.8 / 5",
+          note: "Stabilny sprint przed wzrostem presji release."
+        },
+        {
+          name: "Sprint 24.07",
+          period: "1 kwi - 12 kwi",
+          throughput: "30 pts",
+          cycleTime: "4.9 d",
+          reviewTime: "26 h",
+          defects: "3",
+          workload: "3.2 / 5",
+          focus: "3.3 / 5",
+          note: "Więcej pracy dowiezionej, ale pojawiły się sygnały przeciążenia."
+        },
+        {
+          name: "Sprint 24.08",
+          period: "15 kwi - 26 kwi",
+          throughput: "34 pts",
+          cycleTime: "5.6 d",
+          reviewTime: "31 h",
+          defects: "5",
+          workload: "2.8 / 5",
+          focus: "2.9 / 5",
+          note: "Najmocniejsze tempo delivery, ale też wyraźny koszt jakości i komfortu pracy."
+        }
+      ],
+      commentThemes: [
+        {
+          theme: "Presja release na końcu sprintu",
+          weight: "High",
+          tone: "investigate",
+          detail: "Kilka osób wskazuje, że ostatnie 3 dni sprintu to gaszenie pożarów i szybkie merge'e."
+        },
+        {
+          theme: "Review między spotkaniami",
+          weight: "Medium",
+          tone: "caution",
+          detail: "Komentarze sugerują, że review jest robione szybko i bez spokojnego czasu na analizę."
+        },
+        {
+          theme: "Priorytety jasne od początku",
+          weight: "Low",
+          tone: "healthy",
+          detail: "Zespół nie ma problemu z tym, co robić. Problem jest raczej w tempie niż w kierunku."
+        }
+      ],
+      strengths: [
+        "Dobrze rozumiany cel sprintu i wysoka jasność priorytetów.",
+        "Zespół nadal dowozi ważne elementy roadmapy.",
+        "Wysoki response rate pozwala ufać danym z ankiety."
+      ],
+      risks: [
+        "Szybszy delivery zaczyna podnosić liczbę defektów po release.",
+        "Review time rośnie, mimo że komentarze sugerują spadek jakości review.",
+        "Focus time i workload pogarszają się drugi sprint z rzędu."
+      ],
+      nextActions: [
+        "Na najbliższy sprint zmniejszyć scope release o 10-15%.",
+        "Zablokować 2 stałe okna na review zamiast robić je ad hoc między spotkaniami.",
+        "Sprawdzić, które poprawki po release generują najwięcej pracy reaktywnej."
+      ]
+    },
+    beta: {
+      aiSummary:
+        "Team Beta wygląda najbardziej zdrowo w całej organizacji. Delivery jest stabilne, review działa sprawnie, a wyniki z ankiety nie pokazują dużych napięć. To dobry zespół referencyjny do porównania z Alpha i Gamma.",
+      snapshot: [
+        {
+          label: "Aktualny status",
+          value: "Healthy",
+          note: "Stabilny rytm sprintów i release",
+          tone: "healthy"
+        },
+        {
+          label: "Sprint pulse",
+          value: "4.2 / 5",
+          note: "Najwyższy wynik w organizacji",
+          tone: "healthy"
+        },
+        {
+          label: "Escaped defects",
+          value: "1",
+          note: "Jakość stabilna od 3 sprintów",
+          tone: "healthy"
+        },
+        {
+          label: "Response rate",
+          value: "86%",
+          note: "Wystarczająco mocny sygnał do trendów",
+          tone: "healthy"
+        }
+      ],
+      surveyBreakdown: [
+        {
+          label: "Workload sustainability",
+          score: 4.3,
+          note: "Tempo pracy oceniane jako zdrowe i przewidywalne.",
+          tone: "healthy"
+        },
+        {
+          label: "Focus time",
+          score: 4.1,
+          note: "Zespół ma regularne bloki skupionej pracy.",
+          tone: "healthy"
+        },
+        {
+          label: "Clarity",
+          score: 4.4,
+          note: "Priorytety i zależności są dobrze komunikowane.",
+          tone: "healthy"
+        },
+        {
+          label: "Review quality",
+          score: 4.0,
+          note: "Review jest szybkie, ale nadal postrzegane jako dokładne.",
+          tone: "healthy"
+        },
+        {
+          label: "Tooling support",
+          score: 3.8,
+          note: "Jedyny częstszy temat to zależności od innego zespołu infrastruktury.",
+          tone: "caution"
+        }
+      ],
+      sprintHistory: [
+        {
+          name: "Sprint 24.06",
+          period: "18 mar - 29 mar",
+          throughput: "21 pts",
+          cycleTime: "3.5 d",
+          reviewTime: "13 h",
+          defects: "1",
+          workload: "4.1 / 5",
+          focus: "4.0 / 5",
+          note: "Równy sprint bez większych blokad."
+        },
+        {
+          name: "Sprint 24.07",
+          period: "1 kwi - 12 kwi",
+          throughput: "22 pts",
+          cycleTime: "3.4 d",
+          reviewTime: "13 h",
+          defects: "1",
+          workload: "4.2 / 5",
+          focus: "4.1 / 5",
+          note: "Stabilny rytm pracy i brak wzrostu pracy reaktywnej."
+        },
+        {
+          name: "Sprint 24.08",
+          period: "15 kwi - 26 kwi",
+          throughput: "22 pts",
+          cycleTime: "3.2 d",
+          reviewTime: "12 h",
+          defects: "1",
+          workload: "4.3 / 5",
+          focus: "4.1 / 5",
+          note: "Najbardziej przewidywalny zespół w ostatnim cyklu."
+        }
+      ],
+      commentThemes: [
+        {
+          theme: "Dobre planowanie pracy",
+          weight: "Medium",
+          tone: "healthy",
+          detail: "Komentarze chwalą spokojne sprint planning i realistyczny scope."
+        },
+        {
+          theme: "Zależności od infrastruktury",
+          weight: "Low",
+          tone: "caution",
+          detail: "Pojawia się temat czekania na zewnętrzne decyzje platformowe."
+        }
+      ],
+      strengths: [
+        "Najbardziej stabilny review flow w organizacji.",
+        "Bardzo dobra przewidywalność sprintów.",
+        "Niski poziom pracy reaktywnej po wdrożeniach."
+      ],
+      risks: [
+        "Ryzyko zależności od zespołów poza Beta.",
+        "Możliwe spowolnienie, jeśli pojawi się więcej pilnych zgłoszeń integracyjnych."
+      ],
+      nextActions: [
+        "Użyć Team Beta jako benchmarku dobrych praktyk review.",
+        "Spisać ich rytm sprint planning i sharing blockers.",
+        "Monitorować zależności z infrastrukturą, zanim staną się częstym blockerem."
+      ]
+    },
+    gamma: {
+      aiSummary:
+        "Team Gamma nadal dostarcza szybko, ale ich flow robi się coraz mniej przewidywalny. Ankiety nie pokazują kryzysu jak w Alpha, ale widać rosnące zmęczenie zmianami zakresu prac i większą liczbę poprawek po sprintach.",
+      snapshot: [
+        {
+          label: "Aktualny status",
+          value: "Caution",
+          note: "Dobre tempo, ale słabsza przewidywalność",
+          tone: "caution"
+        },
+        {
+          label: "Sprint pulse",
+          value: "3.6 / 5",
+          note: "Środek stawki w organizacji",
+          tone: "caution"
+        },
+        {
+          label: "Escaped defects",
+          value: "3",
+          note: "Lekki wzrost po nowych funkcjach",
+          tone: "caution"
+        },
+        {
+          label: "Response rate",
+          value: "88%",
+          note: "Dane wystarczające do trendów",
+          tone: "healthy"
+        }
+      ],
+      surveyBreakdown: [
+        {
+          label: "Workload sustainability",
+          score: 3.4,
+          note: "Workload jeszcze akceptowalny, ale czuć więcej zmian w trakcie sprintu.",
+          tone: "caution"
+        },
+        {
+          label: "Focus time",
+          score: 3.5,
+          note: "Focus rozbijany przez częste korekty scope i pytania produktowe.",
+          tone: "caution"
+        },
+        {
+          label: "Clarity",
+          score: 3.2,
+          note: "Najbardziej problematyczny obszar w tym zespole.",
+          tone: "investigate"
+        },
+        {
+          label: "Review quality",
+          score: 3.7,
+          note: "Review jest całkiem dobre, ale pojawia się więcej pośpiechu przy końcówce sprintu.",
+          tone: "caution"
+        },
+        {
+          label: "Tooling support",
+          score: 3.9,
+          note: "Narzędzia nie są problemem, większy wpływ ma zmienny scope.",
+          tone: "healthy"
+        }
+      ],
+      sprintHistory: [
+        {
+          name: "Sprint 24.06",
+          period: "18 mar - 29 mar",
+          throughput: "24 pts",
+          cycleTime: "3.9 d",
+          reviewTime: "16 h",
+          defects: "2",
+          workload: "3.8 / 5",
+          focus: "3.8 / 5",
+          note: "Dobry start nowej inicjatywy produktowej."
+        },
+        {
+          name: "Sprint 24.07",
+          period: "1 kwi - 12 kwi",
+          throughput: "26 pts",
+          cycleTime: "4.1 d",
+          reviewTime: "17 h",
+          defects: "2",
+          workload: "3.6 / 5",
+          focus: "3.6 / 5",
+          note: "Pojawia się więcej zmian zakresu w połowie sprintu."
+        },
+        {
+          name: "Sprint 24.08",
+          period: "15 kwi - 26 kwi",
+          throughput: "28 pts",
+          cycleTime: "4.4 d",
+          reviewTime: "18 h",
+          defects: "3",
+          workload: "3.4 / 5",
+          focus: "3.5 / 5",
+          note: "Więcej pracy dowiezionej, ale kosztem przewidywalności i większej liczby poprawek."
+        }
+      ],
+      commentThemes: [
+        {
+          theme: "Zmieniający się scope sprintu",
+          weight: "High",
+          tone: "investigate",
+          detail: "Najczęściej powtarzany komentarz dotyczy zmiany kierunku pracy po środku sprintu."
+        },
+        {
+          theme: "Szybkie wsparcie produktowe",
+          weight: "Low",
+          tone: "healthy",
+          detail: "Pozytywny sygnał: zespół dobrze współpracuje z product managerem mimo zmian."
+        },
+        {
+          theme: "Końcówka sprintu bardziej napięta",
+          weight: "Medium",
+          tone: "caution",
+          detail: "Kilka osób wskazuje, że końcówka sprintu jest coraz mniej przewidywalna."
+        }
+      ],
+      strengths: [
+        "Wysoki throughput i dobra reakcja na potrzeby biznesowe.",
+        "Dobry poziom współpracy z product managerem.",
+        "Brak mocnych problemów narzędziowych."
+      ],
+      risks: [
+        "Spadek clarity może szybko przełożyć się na większy chaos delivery.",
+        "Rosnąca liczba defektów przy nowych funkcjach.",
+        "Zmienny scope może z czasem obniżyć zaufanie zespołu do planowania sprintu."
+      ],
+      nextActions: [
+        "Ograniczyć liczbę zmian scope po midpoint review sprintu.",
+        "Dodać prosty release checklist dla nowych funkcji biznesowych.",
+        "Na następnym retro sprawdzić, które zmiany były naprawdę konieczne, a które mogły poczekać."
+      ]
+    }
+  }
 };

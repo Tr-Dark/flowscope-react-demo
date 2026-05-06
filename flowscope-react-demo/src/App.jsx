@@ -3,12 +3,19 @@ import {
   appSummary,
   integrationsOverview,
   sections,
-  surveysOverview
+  surveysOverview,
+  teamsOverview
 } from "./mockData.js";
 
 function App() {
   const [activeSection, setActiveSection] = useState(sections[0].id);
+  const [selectedTeamId, setSelectedTeamId] = useState(teamsOverview.dashboard[0].id);
+
   const currentSection = sections.find((section) => section.id === activeSection);
+  const selectedTeam =
+    teamsOverview.dashboard.find((team) => team.id === selectedTeamId) ?? teamsOverview.dashboard[0];
+  const selectedTeamDetail =
+    teamsOverview.details[selectedTeam.id] ?? teamsOverview.details[teamsOverview.dashboard[0].id];
 
   return (
     <div className="app-shell">
@@ -56,7 +63,7 @@ function App() {
       <main className="main-panel">
         <header className="topbar">
           <div>
-            <p className="eyebrow">Etap 3 / Pierwsze realne ekrany</p>
+            <p className="eyebrow">Etap {currentSection.index} / FlowScope Demo</p>
             <h2>{currentSection.title}</h2>
             <p className="subtitle">{currentSection.description}</p>
           </div>
@@ -85,9 +92,17 @@ function App() {
 
         {activeSection === "integrations" && <IntegrationsSection />}
         {activeSection === "surveys" && <SurveysSection />}
-        {activeSection !== "integrations" && activeSection !== "surveys" && (
-          <PlaceholderSection currentSection={currentSection} />
+        {activeSection === "teams" && (
+          <TeamsSection
+            selectedTeam={selectedTeam}
+            selectedTeamDetail={selectedTeamDetail}
+            selectedTeamId={selectedTeamId}
+            setSelectedTeamId={setSelectedTeamId}
+          />
         )}
+        {activeSection !== "integrations" &&
+          activeSection !== "surveys" &&
+          activeSection !== "teams" && <PlaceholderSection currentSection={currentSection} />}
       </main>
     </div>
   );
@@ -297,6 +312,228 @@ function SurveysSection() {
                 </button>
               </div>
             ))}
+          </div>
+        </article>
+      </section>
+    </>
+  );
+}
+
+function TeamsSection({ selectedTeam, selectedTeamDetail, selectedTeamId, setSelectedTeamId }) {
+  return (
+    <>
+      <section className="summary-grid">
+        {teamsOverview.summaryCards.map((item) => (
+          <article key={item.label} className="summary-card">
+            <p className="card-label">{item.label}</p>
+            <strong>{item.value}</strong>
+            <span>{item.note}</span>
+          </article>
+        ))}
+      </section>
+
+      <section className="content-grid">
+        <article className="panel-card wide">
+          <div className="section-head">
+            <div>
+              <p className="card-label">Teams Dashboard</p>
+              <h3 className="section-title">Przegląd organizacji</h3>
+            </div>
+            <p className="small-copy section-copy">
+              Każda karta pokazuje twarde metryki, sygnał z ankiety po sprincie i główny temat do
+              sprawdzenia.
+            </p>
+          </div>
+
+          <div className="team-dashboard-grid">
+            {teamsOverview.dashboard.map((team) => (
+              <button
+                key={team.id}
+                className={`team-dashboard-card ${team.status} ${
+                  team.id === selectedTeamId ? "active" : ""
+                }`}
+                onClick={() => setSelectedTeamId(team.id)}
+                type="button"
+              >
+                <div className="team-dashboard-top">
+                  <div>
+                    <strong>{team.name}</strong>
+                    <span>{team.mission}</span>
+                  </div>
+                  <span className={`status-pill ${team.status}`}>{team.statusLabel}</span>
+                </div>
+
+                <div className="team-dashboard-meta">
+                  <span>
+                    <strong>Manager:</strong> {team.manager}
+                  </span>
+                  <span>
+                    <strong>Squad:</strong> {team.squadSize}
+                  </span>
+                  <span>
+                    <strong>Response rate:</strong> {team.responseRate}
+                  </span>
+                  <span>
+                    <strong>Sprint pulse:</strong> {team.pulse}
+                  </span>
+                </div>
+
+                <div className="team-metric-row">
+                  {team.metrics.map((metric) => (
+                    <div key={metric.label} className="mini-metric-card">
+                      <span>{metric.label}</span>
+                      <strong>{metric.value}</strong>
+                      <small className={`trend trend-${metric.tone}`}>{metric.trend}</small>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="team-focus-list">
+                  <div>
+                    <p className="micro-label">Top risk</p>
+                    <strong>{team.topRisk}</strong>
+                  </div>
+                  <div>
+                    <p className="micro-label">Top strength</p>
+                    <strong>{team.topStrength}</strong>
+                  </div>
+                </div>
+              </button>
+            ))}
+          </div>
+        </article>
+      </section>
+
+      <section className="content-grid">
+        <article className="panel-card wide">
+          <div className="section-head">
+            <div>
+              <p className="card-label">Team Detail</p>
+              <h3 className="section-title">{selectedTeam.name}</h3>
+            </div>
+            <div className="detail-head-meta">
+              <span className={`status-pill ${selectedTeam.status}`}>{selectedTeam.statusLabel}</span>
+              <span className="chip">{selectedTeam.releaseWindow}</span>
+            </div>
+          </div>
+
+          <p className="detail-summary">{selectedTeamDetail.aiSummary}</p>
+
+          <div className="detail-snapshot-grid">
+            {selectedTeamDetail.snapshot.map((item) => (
+              <div key={item.label} className={`snapshot-card ${item.tone}`}>
+                <p className="card-label">{item.label}</p>
+                <strong>{item.value}</strong>
+                <span>{item.note}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="detail-columns">
+            <div className="detail-column">
+              <p className="card-label">Survey Breakdown</p>
+              <div className="score-list">
+                {selectedTeamDetail.surveyBreakdown.map((item) => (
+                  <div key={item.label} className="score-row">
+                    <div className="score-top">
+                      <strong>{item.label}</strong>
+                      <span>{item.score.toFixed(1)} / 5</span>
+                    </div>
+                    <div className="score-track" aria-hidden="true">
+                      <div
+                        className={`score-fill ${item.tone}`}
+                        style={{ width: `${(item.score / 5) * 100}%` }}
+                      />
+                    </div>
+                    <p className="small-copy">{item.note}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="detail-column">
+              <p className="card-label">Sprint Timeline</p>
+              <div className="timeline-list">
+                {selectedTeamDetail.sprintHistory.map((sprint) => (
+                  <div key={sprint.name} className="timeline-card">
+                    <div className="timeline-top">
+                      <strong>{sprint.name}</strong>
+                      <span>{sprint.period}</span>
+                    </div>
+                    <div className="timeline-metrics">
+                      <span>
+                        <strong>Throughput:</strong> {sprint.throughput}
+                      </span>
+                      <span>
+                        <strong>Cycle time:</strong> {sprint.cycleTime}
+                      </span>
+                      <span>
+                        <strong>Review time:</strong> {sprint.reviewTime}
+                      </span>
+                      <span>
+                        <strong>Escaped defects:</strong> {sprint.defects}
+                      </span>
+                      <span>
+                        <strong>Workload:</strong> {sprint.workload}
+                      </span>
+                      <span>
+                        <strong>Focus:</strong> {sprint.focus}
+                      </span>
+                    </div>
+                    <p className="small-copy">{sprint.note}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section className="content-grid">
+        <article className="panel-card">
+          <p className="card-label">Open Comments Themes</p>
+          <div className="signal-list">
+            {selectedTeamDetail.commentThemes.map((item) => (
+              <div key={item.theme} className="signal-card">
+                <div className="program-top">
+                  <strong>{item.theme}</strong>
+                  <span className={`status-pill ${item.tone}`}>{item.weight}</span>
+                </div>
+                <p className="small-copy">{item.detail}</p>
+              </div>
+            ))}
+          </div>
+        </article>
+
+        <article className="panel-card">
+          <p className="card-label">Manager View</p>
+          <div className="stacked-list">
+            <div className="insight-block">
+              <strong>Strengths</strong>
+              <ul className="question-bullets">
+                {selectedTeamDetail.strengths.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="insight-block">
+              <strong>Risks</strong>
+              <ul className="question-bullets">
+                {selectedTeamDetail.risks.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="insight-block">
+              <strong>Suggested next actions</strong>
+              <ul className="question-bullets">
+                {selectedTeamDetail.nextActions.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </article>
       </section>
