@@ -1,7 +1,0 @@
-6. Jak mierzyć efektywność pracy zespołów IT bez demotywowania pracowników?
-Problem:
-Zbyt sztywne KPI obniżają jakość i morale, a brak mierników utrudnia zarządzanie.
-Zakres:
-• przegląd metryk (velocity, lead time, itp.)
-• ryzyka „złych KPI”
-• propozycja zbalansowanego modelu mierzenia efektywności
