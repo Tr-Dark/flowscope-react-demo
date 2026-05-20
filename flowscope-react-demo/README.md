@@ -1,25 +1,12 @@
 # FlowScope React Demo
 
-## Czym to jest
+React-based MVP for presenting the FlowScope product concept in a more realistic workspace format.
 
-To jest nowy szkielet demo produktu FlowScope zbudowany w React.
+## Purpose
 
-Cel tej wersji:
-- przejść z prostego HTML demo do bardziej profesjonalnej struktury,
-- przygotować bazę pod nowe ekrany,
-- łatwo rozwijać sekcje produktu etapami.
+This app replaces the earlier static demo with a structure that is easier to extend screen by screen. It is meant for product presentation, flow validation, and UI iteration.
 
-## Co już jest
-
-Obecnie szkielet zawiera:
-- app shell,
-- sidebar,
-- topbar,
-- główne sekcje produktu,
-- placeholdery ekranów,
-- wspólny model danych dla organizacji i zespołów.
-
-## Główne sekcje
+## Included sections
 
 - Integrations
 - Surveys
@@ -27,27 +14,15 @@ Obecnie szkielet zawiera:
 - Insights
 - Governance
 
-## Jak uruchomić
+## Run the project
 
-1. Wejdź do folderu:
+```bash
+npm install
+npm run dev
+```
 
-`flowscope-react-demo`
+## Notes
 
-2. Zainstaluj zależności:
-
-`npm install`
-
-3. Uruchom projekt:
-
-`npm run dev`
-
-## Ważne
-
-Projekt nadal działa tylko na mock data.
-Nie ma backendu ani prawdziwych integracji.
-
-To jest świadoma decyzja, bo najpierw budujemy:
-- strukturę,
-- flow,
-- ekrany,
-- logikę produktu.
+- frontend-only demo
+- powered by mock data
+- no backend or real integrations yet
