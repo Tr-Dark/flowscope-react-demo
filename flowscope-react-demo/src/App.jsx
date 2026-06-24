@@ -16,7 +16,7 @@ const STATUS_LABELS = {
   healthy: "Stabilny",
   caution: "Do obserwacji",
   investigate: "Wymaga uwagi",
-  connected: "Polaczono"
+  connected: "Połączono"
 };
 
 const BADGE_LABELS = {
@@ -28,7 +28,7 @@ const BADGE_LABELS = {
 
 const WEIGHT_LABELS = {
   High: "Wysoki",
-  Medium: "Sredni",
+  Medium: "Średni",
   Low: "Niski"
 };
 
@@ -119,11 +119,11 @@ function App() {
           <p className="eyebrow">FlowScope</p>
           <h1>FlowScope</h1>
           <p className="brand-copy">
-            Platforma do mierzenia efektywnosci zespolow IT bez toksycznych KPI.
+            Platforma do mierzenia efektywności zespołów IT bez toksycznych KPI.
           </p>
         </div>
 
-        <nav className="section-nav" aria-label="Glowne sekcje platformy">
+        <nav className="section-nav" aria-label="Główne sekcje platformy">
           {sections.map((section) => (
             <button
               key={section.id}
@@ -141,7 +141,7 @@ function App() {
         </nav>
 
         <section className="sidebar-card">
-          <p className="card-label">Przestrzen robocza</p>
+          <p className="card-label">Przestrzeń robocza</p>
           <p className="sidebar-copy">{appSummary.stageStatus}</p>
         </section>
 
@@ -165,14 +165,14 @@ function App() {
       <main className={`main-panel section-${activeSection}`}>
         <header className="topbar">
           <div>
-            <p className="eyebrow">Przeglad platformy</p>
+            <p className="eyebrow">Przegląd platformy</p>
             <h2>{currentSection.title}</h2>
             <p className="subtitle">{currentSection.description}</p>
           </div>
           <div className="topbar-chips">
             <span className="chip">Dane operacyjne</span>
             <span className="chip">Wnioski AI</span>
-            <span className="chip">Kondycja zespolu</span>
+            <span className="chip">Kondycja zespołu</span>
           </div>
         </header>
 
@@ -183,7 +183,7 @@ function App() {
             <p className="hero-copy">{currentSection.heroCopy}</p>
           </div>
           <div className="hero-side">
-            <p className="card-label">Najwazniejsze elementy</p>
+            <p className="card-label">Najważniejsze elementy</p>
             <ul className="bullet-list">
               {currentSection.futureItems.map((item) => (
                 <li key={item}>{item}</li>
@@ -234,7 +234,7 @@ function WelcomeScreen({ onEnter }) {
 
           <div className="welcome-actions">
             <button className="primary-button" onClick={onEnter} type="button">
-              Przejdz do platformy
+              Przejdź do platformy
             </button>
             <span className="welcome-hint">{welcomeOverview.hint}</span>
           </div>
@@ -261,7 +261,7 @@ function WelcomeScreen({ onEnter }) {
           </div>
 
           <div className="welcome-principles-card">
-            <p className="card-label">Glowne zasady</p>
+            <p className="card-label">Główne zasady</p>
             <ul className="bullet-list">
               {welcomeOverview.principles.map((item) => (
                 <li key={item}>{item}</li>
@@ -298,7 +298,7 @@ function IntegrationsSection({ showToast }) {
         next.delete(name);
         return next;
       });
-      setSyncTimestamps((prev) => ({ ...prev, [name]: "przed chwila" }));
+      setSyncTimestamps((prev) => ({ ...prev, [name]: "przed chwilą" }));
       setSyncTime(new Date());
       showToast(`${name} zsynchronizowany ✓`, "success");
     }, 2200);
@@ -316,7 +316,7 @@ function IntegrationsSection({ showToast }) {
       }, 1700);
     } else if (connectModal.step === 3) {
       setConnectedExtra((prev) => [...prev, connectModal.name]);
-      showToast(`${connectModal.name} podlaczony ✓`, "success");
+      showToast(`${connectModal.name} podłączony ✓`, "success");
       setConnectModal(null);
     }
   };
@@ -333,7 +333,7 @@ function IntegrationsSection({ showToast }) {
         name,
         status: "connected",
         owner: "—",
-        lastSync: "przed chwila",
+        lastSync: "przed chwilą",
         description: avail?.preview ?? "",
         metrics: [],
         usage: ""
@@ -382,7 +382,7 @@ function IntegrationsSection({ showToast }) {
 
       <section className="content-grid">
         <article className="panel-card">
-          <p className="card-label">Przeglad integracji</p>
+          <p className="card-label">Przegląd integracji</p>
           <div className="integration-list">
             {allConnected.map((integration) => {
               const syncing = syncingIds.has(integration.name);
@@ -448,7 +448,7 @@ function IntegrationsSection({ showToast }) {
                     type="button"
                     onClick={() => handleConnect(integration)}
                   >
-                    Polacz
+                    Połącz
                   </button>
                 </div>
                 <p className="small-copy">{integration.preview}</p>
@@ -458,7 +458,7 @@ function IntegrationsSection({ showToast }) {
             {availableFiltered.length === 0 && (
               <div style={{ textAlign: "center", padding: "28px 16px" }}>
                 <p style={{ color: "var(--teal)", fontWeight: 600, margin: 0 }}>
-                  ✓ Wszystkie integracje sa podlaczone!
+                  ✓ Wszystkie integracje są podłączone!
                 </p>
               </div>
             )}
@@ -468,7 +468,7 @@ function IntegrationsSection({ showToast }) {
 
       <section className="content-grid">
         <article className="panel-card wide">
-          <p className="card-label">Jak dane lacza sie w analizie</p>
+          <p className="card-label">Jak dane łączą się w analizie</p>
           <div className="mapping-list">
             {integrationsOverview.mappingFlow.map((item) => (
               <div key={item.source} className="mapping-card">
@@ -484,8 +484,8 @@ function IntegrationsSection({ showToast }) {
       {connectModal && (
         <Modal
           onClose={closeModal}
-          title={`Podlacz ${connectModal.name}`}
-          subtitle="Podaj dane uwierzytelniania, zeby polaczyc integracje z FlowScope."
+          title={`Podłącz ${connectModal.name}`}
+          subtitle="Podaj dane uwierzytelniania, żeby połączyć integrację z FlowScope."
         >
           <div className="connect-steps">
             <div
@@ -531,7 +531,7 @@ function IntegrationsSection({ showToast }) {
                 onClick={handleConnectNext}
                 disabled={!connectModal.token.trim()}
               >
-                Testuj polaczenie →
+                Testuj połączenie →
               </button>
             </>
           )}
@@ -539,12 +539,12 @@ function IntegrationsSection({ showToast }) {
           {connectModal.step === 2 && (
             <>
               <p style={{ color: "var(--ink-soft)", margin: "0 0 4px" }}>
-                Testowanie polaczenia z {connectModal.name}…
+                Testowanie połączenia z {connectModal.name}…
               </p>
               <div className="progress-bar-track">
                 <div className="progress-bar-fill" />
               </div>
-              <p className="small-copy">Weryfikacja uprawnien i dostepnosci danych…</p>
+              <p className="small-copy">Weryfikacja uprawnień i dostępności danych…</p>
             </>
           )}
 
@@ -552,9 +552,9 @@ function IntegrationsSection({ showToast }) {
             <>
               <div className="success-banner">
                 <div className="success-banner-icon">✅</div>
-                <h3>Polaczono!</h3>
+                <h3>Połączono!</h3>
                 <p>
-                  {connectModal.name} zostal pomyslnie podlaczony do FlowScope. Dane zaczna byc
+                  {connectModal.name} zostal pomyslnie podłączony do FlowScope. Dane zaczna byc
                   synchronizowane automatycznie.
                 </p>
               </div>
@@ -577,40 +577,40 @@ function IntegrationsSection({ showToast }) {
 // ─── Surveys Section ──────────────────────────────────────────────────────────
 
 const RELEASE_QUESTIONS = [
-  "Czy confidence przed release byl wysoki?",
-  "Czy proces release przebiegl zgodnie z planem?",
-  "Czy komunikacja o release dotarla do wszystkich zainteresowanych?",
-  "Czy jakosc kodu po release spelnila oczekiwania?"
+  "Czy confidence przed release był wysoki?",
+  "Czy proces release przebiegł zgodnie z planem?",
+  "Czy komunikacja o release dotarła do wszystkich zainteresowanych?",
+  "Czy jakość kodu po release spełniła oczekiwania?"
 ];
 
 const QUARTERLY_QUESTIONS = [
-  "Jak oceniasz jakosc wspolpracy w zespole w ostatnim kwartale?",
-  "Czy priorytety byly jasne i stabilne przez caly kwartal?",
-  "Jak oceniasz procesy delivery i przewidywalnosc sprintow?",
-  "Czy narzedzia i infrastruktura wspieraly prace zespolu?",
-  "Jak oceniasz jakosc code review w tym kwartale?",
-  "Czy workload byl zrownowazony przez caly kwartal?",
-  "Czy retrospektywy prowadzily do realnych zmian?",
-  "Jak oceniasz komunikacje miedzy zespolami?",
-  "Czy miales mozliwosc uczenia sie i rozwoju w tym kwartale?",
+  "Jak oceniasz jakość współpracy w zespole w ostatnim kwartale?",
+  "Czy priorytety były jasne i stabilne przez cały kwartał?",
+  "Jak oceniasz procesy delivery i przewidywalność sprintów?",
+  "Czy narzędzia i infrastruktura wspierały pracę zespołu?",
+  "Jak oceniasz jakość code review w tym kwartale?",
+  "Czy workload był zrównoważony przez cały kwartał?",
+  "Czy retrospektywy prowadziły do realnych zmian?",
+  "Jak oceniasz komunikację między zespołami?",
+  "Czy miałeś możliwość uczenia się i rozwoju w tym kwartale?",
   "Czy czujesz ryzyko wypalenia zawodowego?"
 ];
 
 const ANNUAL_QUESTIONS = [
-  "Jak oceniasz ogolna kulture pracy w organizacji?",
-  "Czy czujesz, ze twoj rozwoj zawodowy jest wspierany?",
-  "Jak oceniasz relacje z bezposrednim przelozonym?",
-  "Czy procesy i narzedzia pomagaja ci pracowac efektywnie?",
-  "Jak oceniasz wspolprace miedzydzialowa?",
-  "Czy priorytety organizacji sa dla ciebie jasne?",
+  "Jak oceniasz ogólną kulturę pracy w organizacji?",
+  "Czy czujesz, że twój rozwój zawodowy jest wspierany?",
+  "Jak oceniasz relacje z bezpośrednim przełożonym?",
+  "Czy procesy i narzędzia pomagają ci pracować efektywnie?",
+  "Jak oceniasz współpracę międzydziałową?",
+  "Czy priorytety organizacji są dla ciebie jasne?",
   "Jak oceniasz poziom autonomii w swojej pracy?",
-  "Czy feedback, ktory otrzymujesz, jest konstruktywny i regularny?",
-  "Jak oceniasz rownowage miedzy praca a zyciem prywatnym?",
-  "Czy czujesz sie psychologicznie bezpiecznie w swoim zespole?",
-  "Jak oceniasz mozliwosci rozwoju zawodowego?",
-  "Czy rozumiesz, jak twoja praca wplywa na cele organizacji?",
-  "Jak oceniasz procesy onboardingu nowych czlonkow zespolu?",
-  "Czy sa obszary, ktore chcialbys poprawic w organizacji?"
+  "Czy feedback, który otrzymujesz, jest konstruktywny i regularny?",
+  "Jak oceniasz równowagę między pracą a życiem prywatnym?",
+  "Czy czujesz się psychologicznie bezpiecznie w swoim zespole?",
+  "Jak oceniasz możliwości rozwoju zawodowego?",
+  "Czy rozumiesz, jak twoja praca wpływa na cele organizacji?",
+  "Jak oceniasz procesy onboardingu nowych członków zespołu?",
+  "Czy są obszary, które chciałbyś poprawić w organizacji?"
 ];
 
 const PROGRAM_BUILDER_CONFIG = {
@@ -622,26 +622,26 @@ const PROGRAM_BUILDER_CONFIG = {
     questions: surveysOverview.sprintBuilder.questions
   },
   1: {
-    cadence: "Warunkowo po waznym release",
+    cadence: "Warunkowo po ważnym release",
     anonymity: "Wyniki widoczne od minimum 3 odpowiedzi",
     responseGoal: "Cel: 80% odpowiedzi w 48h",
     categories: [
-      { name: "Release Confidence", weight: "High", note: "Poziom pewnosci przed i po wydaniu." },
-      { name: "Process Quality", weight: "High", note: "Jakosc procesu wydawniczego." },
-      { name: "Communication", weight: "Medium", note: "Komunikacja o release wewnatrz zespolu." },
+      { name: "Release Confidence", weight: "High", note: "Poziom pewności przed i po wydaniu." },
+      { name: "Process Quality", weight: "High", note: "Jakość procesu wydawniczego." },
+      { name: "Communication", weight: "Medium", note: "Komunikacja o release wewnątrz zespołu." },
       { name: "Post-release Stability", weight: "Medium", note: "Stabilnosc po wdrozeniu na produkcje." }
     ],
     questions: RELEASE_QUESTIONS
   },
   2: {
-    cadence: "Raz na kwartal",
+    cadence: "Raz na kwartał",
     anonymity: "Wyniki widoczne od minimum 5 odpowiedzi",
     responseGoal: "Cel: 85% odpowiedzi w 7 dni",
     categories: [
-      { name: "Collaboration", weight: "High", note: "Jakosc wspolpracy w zespole i miedzy zespolami." },
+      { name: "Collaboration", weight: "High", note: "Jakość współpracy w zespole i między zespołami." },
       { name: "Process & Delivery", weight: "High", note: "Efektywnosc procesow i rytm delivery." },
-      { name: "Tooling", weight: "Medium", note: "Jakosc narzedzi i infrastruktury." },
-      { name: "Wellbeing", weight: "Medium", note: "Rownowaga workload i dobrostanu zespolu." }
+      { name: "Tooling", weight: "Medium", note: "Jakość narzedzi i infrastruktury." },
+      { name: "Wellbeing", weight: "Medium", note: "Równowaga workload i dobrostanu zespołu." }
     ],
     questions: QUARTERLY_QUESTIONS
   },
@@ -650,11 +650,11 @@ const PROGRAM_BUILDER_CONFIG = {
     anonymity: "Wyniki widoczne od minimum 5 odpowiedzi",
     responseGoal: "Cel: 90% odpowiedzi w 14 dni",
     categories: [
-      { name: "Culture & Values", weight: "High", note: "Kultura pracy i wartosci organizacji." },
-      { name: "Growth & Development", weight: "High", note: "Mozliwosci rozwoju zawodowego i nauki." },
-      { name: "Leadership", weight: "High", note: "Jakosc przywodztwa i zarzadzania." },
-      { name: "Work-life Balance", weight: "Medium", note: "Rownowaga miedzy praca a zyciem prywatnym." },
-      { name: "Psychological Safety", weight: "High", note: "Bezpieczenstwo psychologiczne w zespole." }
+      { name: "Culture & Values", weight: "High", note: "Kultura pracy i wartości organizacji." },
+      { name: "Growth & Development", weight: "High", note: "Możliwości rozwoju zawodowego i nauki." },
+      { name: "Leadership", weight: "High", note: "Jakość przywodztwa i zarzadzania." },
+      { name: "Work-life Balance", weight: "Medium", note: "Równowaga między pracą a życiem prywatnym." },
+      { name: "Psychological Safety", weight: "High", note: "Bezpieczeństwo psychologiczne w zespole." }
     ],
     questions: ANNUAL_QUESTIONS
   }
@@ -730,7 +730,7 @@ function SurveysSection({ showToast }) {
       ...prev,
       [selectedProgramIdx]: [...(prev[selectedProgramIdx] ?? []), ...questions]
     }));
-    showToast(`Dodano ${questions.length} pytan z sugestii AI ✓`, "success");
+    showToast(`Dodano ${questions.length} pytań z sugestii AI ✓`, "success");
   };
 
   return (
@@ -747,7 +747,7 @@ function SurveysSection({ showToast }) {
 
       <section className="content-grid">
         <article className="panel-card">
-          <p className="card-label">Przeglad ankiet</p>
+          <p className="card-label">Przegląd ankiet</p>
 
           <div className="survey-tab-bar">
             {surveysOverview.programs.map((program, idx) => (
@@ -798,7 +798,7 @@ function SurveysSection({ showToast }) {
               </p>
             </div>
             <button className="preview-btn" type="button" onClick={() => setPreviewOpen(true)}>
-              👁 Podglad
+              👁 Podgląd
             </button>
           </div>
 
@@ -807,7 +807,7 @@ function SurveysSection({ showToast }) {
               <strong>Rytm:</strong> {builderConfig.cadence}
             </span>
             <span>
-              <strong>Anonimowosc:</strong> {builderConfig.anonymity}
+              <strong>Anonimowość:</strong> {builderConfig.anonymity}
             </span>
             <span>
               <strong>Cel odpowiedzi:</strong> {builderConfig.responseGoal}
@@ -911,7 +911,7 @@ function SurveysSection({ showToast }) {
 
       <section className="content-grid">
         <article className="panel-card">
-          <p className="card-label">Biblioteka pytan</p>
+          <p className="card-label">Biblioteka pytań</p>
           <div className="library-list">
             {surveysOverview.library.map((group) => (
               <div key={group.category} className="library-card">
@@ -941,7 +941,7 @@ function SurveysSection({ showToast }) {
         </article>
 
         <article className="panel-card">
-          <p className="card-label">Sugestie pytan AI</p>
+          <p className="card-label">Sugestie pytań AI</p>
           <div className="ai-list">
             {surveysOverview.aiSuggestions.map((suggestion) => (
               <div key={suggestion.prompt} className="ai-card">
@@ -977,16 +977,16 @@ function SurveysSection({ showToast }) {
       {previewOpen && (
         <Modal
           onClose={() => setPreviewOpen(false)}
-          title={`Podglad: ${selectedProgram.name}`}
-          subtitle={`Tak wyglada ankieta dla czlonkow zespolu. Odpowiedzi sa anonimowe (min. ${selectedProgramIdx === 1 ? "3" : "5"} odpowiedzi).`}
+          title={`Podgląd: ${selectedProgram.name}`}
+          subtitle={`Tak wygląda ankieta dla członków zespołu. Odpowiedzi są anonimowe (min. ${selectedProgramIdx === 1 ? "3" : "5"} odpowiedzi).`}
         >
           <div className="survey-preview-intro">
             <p className="card-label" style={{ color: "var(--teal)" }}>
               {selectedProgram.name} — Northstar Digital
             </p>
             <p>
-              Hej! Ponizej kilka pytan z ankiety {selectedProgram.name}. Zajmie to ok. {allQuestions.length <= 6 ? "2" : allQuestions.length <= 10 ? "5" : "10"} minut.
-              Odpowiedzi sa anonimowe i widoczne tylko w formie zagregowanej.
+              Hej! Poniżej kilka pytań z ankiety {selectedProgram.name}. Zajmie to ok. {allQuestions.length <= 6 ? "2" : allQuestions.length <= 10 ? "5" : "10"} minut.
+              Odpowiedzi są anonimowe i widoczne tylko w formie zagregowanej.
             </p>
           </div>
 
@@ -1019,7 +1019,7 @@ function SurveysSection({ showToast }) {
             type="button"
             onClick={() => {
               setPreviewOpen(false);
-              showToast("Ankieta gotowa do wyslania w nastepnym sprincie ✓", "info");
+              showToast("Ankieta gotowa do wysłania w następnym sprincie ✓", "info");
             }}
           >
             Wysylam odpowiedz (demo)
@@ -1054,11 +1054,11 @@ function TeamsSection({ selectedTeam, selectedTeamDetail, selectedTeamId, setSel
         <article className="panel-card wide">
           <div className="section-head">
             <div>
-              <p className="card-label">Przeglad zespolow</p>
-              <h3 className="section-title">Obraz calej organizacji</h3>
+              <p className="card-label">Przegląd zespołów</p>
+              <h3 className="section-title">Obraz całej organizacji</h3>
             </div>
             <p className="small-copy section-copy">
-              Kazda karta pokazuje stan zespolu, najwazniejsze sygnaly i temat, ktory warto omowic
+              Każda karta pokazuje stan zespołu, najważniejsze sygnały i temat, który warto omówić
               najszybciej.
             </p>
           </div>
@@ -1088,7 +1088,7 @@ function TeamsSection({ selectedTeam, selectedTeamDetail, selectedTeamId, setSel
                     <strong>Manager:</strong> {team.manager}
                   </span>
                   <span>
-                    <strong>Zespol:</strong> {team.squadSize}
+                    <strong>Zespół:</strong> {team.squadSize}
                   </span>
                   <span>
                     <strong>Udzial odpowiedzi:</strong> {team.responseRate}
@@ -1128,7 +1128,7 @@ function TeamsSection({ selectedTeam, selectedTeamDetail, selectedTeamId, setSel
         <article className="panel-card wide">
           <div className="section-head">
             <div>
-              <p className="card-label">Szczegoly zespolu</p>
+              <p className="card-label">Szczegóły zespołu</p>
               <h3 className="section-title">{selectedTeam.name}</h3>
             </div>
             <div className="detail-head-meta">
@@ -1174,7 +1174,7 @@ function TeamsSection({ selectedTeam, selectedTeamDetail, selectedTeamId, setSel
             </div>
 
             <div className="detail-column">
-              <p className="card-label">Historia sprintow — wykres</p>
+              <p className="card-label">Historia sprintów — wykres</p>
               <div className="sprint-chart">
                 <div className="sprint-chart-legend">
                   <span className="sprint-legend-item">
@@ -1252,7 +1252,7 @@ function TeamsSection({ selectedTeam, selectedTeamDetail, selectedTeamId, setSel
 
       <section className="content-grid">
         <article className="panel-card">
-          <p className="card-label">Najczestsze tematy z komentarzy</p>
+          <p className="card-label">Najczęstsze tematy z komentarzy</p>
           <div className="signal-list">
             {selectedTeamDetail.commentThemes.map((item) => (
               <div key={item.theme} className="signal-card">
@@ -1290,7 +1290,7 @@ function TeamsSection({ selectedTeam, selectedTeamDetail, selectedTeamId, setSel
             </div>
 
             <div className="insight-block">
-              <strong>Najblizsze dzialania</strong>
+              <strong>Najbliższe działania</strong>
               <ul className="question-bullets">
                 {selectedTeamDetail.nextActions.map((item) => (
                   <li key={item}>{item}</li>
@@ -1324,10 +1324,10 @@ function InsightsSection({
       const next = new Set(prev);
       if (next.has(title)) {
         next.delete(title);
-        showToast("Dzialanie oznaczone jako otwarte", "info");
+        showToast("Działanie oznaczone jako otwarte", "info");
       } else {
         next.add(title);
-        showToast("Dzialanie oznaczone jako podjete ✓", "success");
+        showToast("Działanie oznaczone jako podjęte ✓", "success");
       }
       return next;
     });
@@ -1353,12 +1353,12 @@ function InsightsSection({
         <article className="panel-card wide">
           <div className="section-head">
             <div>
-              <p className="card-label">Najwazniejsze sygnaly</p>
+              <p className="card-label">Najważniejsze sygnały</p>
               <h3 className="section-title">Priorytety dla organizacji</h3>
             </div>
             <p className="small-copy section-copy">
-              Ten widok zbiera sygnaly, ktore najbardziej wplywaja na tempo pracy, jakosc i
-              stabilnosc zespolow.
+              Ten widok zbiera sygnały, które najbardziej wpływają na tempo pracy, jakość i
+              stabilność zespołów.
             </p>
           </div>
 
@@ -1377,7 +1377,7 @@ function InsightsSection({
                     <strong>Zakres:</strong> {item.scope}
                   </span>
                   <span>
-                    <strong>Pewnosc:</strong> {item.confidence}
+                    <strong>Pewność:</strong> {item.confidence}
                   </span>
                   <span>
                     <strong>Podstawa:</strong> {item.evidence}
@@ -1393,7 +1393,7 @@ function InsightsSection({
         <article className="panel-card">
           <div className="section-head">
             <div>
-              <p className="card-label">Wybrany zespol</p>
+              <p className="card-label">Wybrany zespół</p>
               <h3 className="section-title">Rozszerzona analiza AI</h3>
             </div>
             <div className="team-pill-row">
@@ -1436,7 +1436,7 @@ function InsightsSection({
         </article>
 
         <article className="panel-card">
-          <p className="card-label">Lancuch sygnalow</p>
+          <p className="card-label">Łańcuch sygnałów</p>
           <div className="evidence-list">
             {focusedInsight.evidenceChain.map((item) => (
               <div key={item.signal} className="evidence-card">
@@ -1451,7 +1451,7 @@ function InsightsSection({
 
       <section className="content-grid">
         <article className="panel-card">
-          <p className="card-label">Polaczenie sygnalow</p>
+          <p className="card-label">Połączenie sygnałów</p>
           <div className="correlation-list">
             {focusedInsight.correlations.map((item) => (
               <div key={item.pair} className="correlation-card">
@@ -1467,12 +1467,12 @@ function InsightsSection({
           <p className="card-label">Kontekst dla managera</p>
           <div className="stacked-list">
             <div className="insight-block">
-              <strong>Jak system podsumowuje sytuacje</strong>
+              <strong>Jak system podsumowuje sytuację</strong>
               <p className="small-copy plain-copy">{focusedInsight.plainLanguage}</p>
             </div>
 
             <div className="insight-block">
-              <strong>Komentarze, ktore to potwierdzaja</strong>
+              <strong>Komentarze, które to potwierdzają</strong>
               <ul className="question-bullets">
                 {selectedTeamDetail.commentThemes.map((item) => (
                   <li key={item.theme}>
@@ -1489,18 +1489,18 @@ function InsightsSection({
         <article className="panel-card wide">
           <div className="section-head">
             <div>
-              <p className="card-label">Plan dzialan</p>
-              <h3 className="section-title">Dzialania na najblizsze 2 sprinty</h3>
+              <p className="card-label">Plan działań</p>
+              <h3 className="section-title">Działania na najbliższe 2 sprinty</h3>
             </div>
             <p className="small-copy section-copy">
-              Kazda rekomendacja ma wlasciciela, powod i moment sprawdzenia efektu.
+              Każda rekomendacja ma właściciela, powód i moment sprawdzenia efektu.
             </p>
           </div>
 
           {doneCount > 0 && (
             <div className="actions-progress">
               <span className="actions-progress-label">
-                {doneCount} / {actionPlan.length} podjeto
+                {doneCount} / {actionPlan.length} podjęto
               </span>
               <div className="actions-progress-bar-track">
                 <div
@@ -1545,7 +1545,7 @@ function InsightsSection({
                     <span className={`action-checkbox ${done ? "checked" : ""}`}>
                       {done && "✓"}
                     </span>
-                    {done ? "Podjeto — kliknij, aby cofnac" : "Oznacz jako podjete"}
+                    {done ? "Podjęto — kliknij, aby cofnąć" : "Oznacz jako podjęte"}
                   </button>
                 </div>
               );
@@ -1577,11 +1577,11 @@ function GovernanceSection() {
           <div className="section-head">
             <div>
               <p className="card-label">Bezpieczne KPI</p>
-              <h3 className="section-title">Jak czytac te dane</h3>
+              <h3 className="section-title">Jak czytać te dane</h3>
             </div>
             <p className="small-copy section-copy">
-              W tym miejscu widac, jak system pomaga korzystac z metryk bez tworzenia presji i
-              zlych nawykow.
+              W tym miejscu widać, jak system pomaga korzystać z metryk bez tworzenia presji i
+              złych nawyków.
             </p>
           </div>
 
@@ -1621,7 +1621,7 @@ function GovernanceSection() {
                       : item.tag === "Optional"
                         ? "Opcjonalne"
                         : item.tag === "Privacy"
-                          ? "Prywatnosc"
+                          ? "Prywatność"
                           : "Zasada"}
                   </span>
                 </div>
@@ -1634,7 +1634,7 @@ function GovernanceSection() {
 
       <section className="content-grid">
         <article className="panel-card">
-          <p className="card-label">Model dostepu</p>
+          <p className="card-label">Model dostępu</p>
           <div className="access-grid">
             {governanceOverview.accessModel.map((item) => (
               <div key={item.role} className="access-card">
@@ -1651,7 +1651,7 @@ function GovernanceSection() {
         </article>
 
         <article className="panel-card">
-          <p className="card-label">Zasady prywatnosci</p>
+          <p className="card-label">Zasady prywatności</p>
           <div className="stacked-list">
             {governanceOverview.privacyRules.map((item) => (
               <div key={item.title} className="insight-block">

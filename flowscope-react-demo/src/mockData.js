@@ -1,59 +1,59 @@
 export const welcomeOverview = {
-  title: "Efektywnosc, jakosc i kondycja zespolu w jednym miejscu.",
+  title: "Efektywność, jakość i kondycja zespołu w jednym miejscu.",
   lead:
-    "FlowScope laczy sygnaly z GitHub, Jira i CI/CD z krotkim feedbackiem po sprincie. W jednym miejscu widac tempo pracy, jakosc, przewidywalnosc i kondycje zespolu.",
-  hint: "Workspace prowadzi od zrodel danych, przez zespoly i analize AI, do konkretnych dzialan.",
+    "FlowScope łączy sygnały z GitHub, Jira i CI/CD z krótkim feedbackiem po sprincie. W jednym miejscu widać tempo pracy, jakość, przewidywalność i kondycję zespołu.",
+  hint: "Workspace prowadzi od źródeł danych, przez zespoły i analizę AI, do konkretnych działań.",
   metrics: [
-    { label: "Polaczone zrodla", value: "4", note: "GitHub, Jira, Slack, CI/CD" },
-    { label: "Zespoly produktowe", value: "3", note: "Alpha, Beta, Gamma" },
+    { label: "Połączone źródła", value: "4", note: "GitHub, Jira, Slack, CI/CD" },
+    { label: "Zespoły produktowe", value: "3", note: "Alpha, Beta, Gamma" },
     { label: "Pytania sprintowe", value: "6", note: "Workload, focus, clarity, review, tooling, predictability" },
-    { label: "Plany dzialan AI", value: "7", note: "Priorytety na najblizsze sprinty" }
+    { label: "Plany działań AI", value: "7", note: "Priorytety na najbliższe sprinty" }
   ],
   pillars: [
     {
       title: "Dane operacyjne",
-      description: "Delivery, quality, predictability i release pressure z codziennych narzedzi pracy."
+      description: "Delivery, quality, predictability i release pressure z codziennych narzędzi pracy."
     },
     {
       title: "Feedback po sprincie",
-      description: "Krotkie ankiety po sprincie, ktore tlumacza workload, focus i review quality."
+      description: "Krótkie ankiety po sprincie, które tłumaczą workload, focus i review quality."
     },
     {
       title: "Wnioski i decyzje",
-      description: "AI laczy dane i pokazuje insighty bez sprowadzania ludzi do prostych rankingow."
+      description: "AI łączy dane i pokazuje insighty bez sprowadzania ludzi do prostych rankingów."
     }
   ],
   principles: [
-    "Produkt pracuje na poziomie zespolu, nie rankingu pojedynczych osob.",
-    "Throughput bez quality i team health nie jest pelnym obrazem efektywnosci.",
-    "Sprint Survey jest krotki, regularny i osadzony w rytmie pracy zespolu.",
-    "Kazdy insight powinien prowadzic do konkretnego dzialania, a nie tylko do wykresu."
+    "Produkt pracuje na poziomie zespołu, nie rankingu pojedynczych osób.",
+    "Throughput bez quality i team health nie jest pełnym obrazem efektywności.",
+    "Sprint Survey jest krótki, regularny i osadzony w rytmie pracy zespołu.",
+    "Każdy insight powinien prowadzić do konkretnego działania, a nie tylko do wykresu."
   ]
 };
 
 export const appSummary = {
   organization: "Northstar Digital",
-  size: "180 osob w IT, 3 zespoly produktowe",
+  size: "180 osób w IT, 3 zespoły produktowe",
   tooling: "GitHub + Jira + Slack + CI/CD",
   stageStatus: "Northstar Digital workspace",
   teams: [
     {
       name: "Team Alpha",
-      role: "Glowna platforma klienta",
+      role: "Główna platforma klienta",
       status: "investigate",
-      summary: "Duze cisnienie release, rosnace ryzyko jakosci i przeciazenia."
+      summary: "Duze ciśnienie release, rosnące ryzyko jakości i przeciążenia."
     },
     {
       name: "Team Beta",
       role: "Platforma i integracje",
       status: "healthy",
-      summary: "Stabilny zespol z drobnymi problemami zaleznosci."
+      summary: "Stabilny zespół z drobnymi problemami zaleznosci."
     },
     {
       name: "Team Gamma",
       role: "Nowe funkcje biznesowe",
       status: "caution",
-      summary: "Dobry throughput, ale mieszane sygnaly z quality i survey."
+      summary: "Dobry throughput, ale mieszane sygnały z quality i survey."
     }
   ]
 };
@@ -63,22 +63,22 @@ export const sections = [
     id: "integrations",
     index: "01",
     title: "Integracje",
-    short: "Zrodla danych",
+    short: "źródła danych",
     description:
-      "Przeglad polaczonych narzedzi i danych, ktore zasilaja analize delivery, quality i team health.",
-    heroTitle: "Najpierw dane twarde, potem feedback zespolu.",
+      "Przegląd połączonych narzędzi i danych, które zasilają analizę delivery, quality i team health.",
+    heroTitle: "Najpierw dane twarde, potem feedback zespołu.",
     heroCopy:
-      "W tym widoku widac, skad pochodza sygnaly o review, przeplywie pracy, release i odpowiedziach zespolu. To one tworza wspolny obraz pracy nad sprintem.",
-    futureItems: ["Przeglad integracji", "Dodaj integracje", "Mapa metryk z podlaczonych uslug"],
+      "W tym widoku widać, skąd pochodzą sygnały o review, przepływie pracy, release i odpowiedziach zespołu. To one tworzą wspólny obraz pracy nad sprintem.",
+    futureItems: ["Przegląd integracji", "Dodaj integracje", "Mapa metryk z podłączonych uslug"],
     screens: [
       {
-        name: "Przeglad integracji",
+        name: "Przegląd integracji",
         goal: "Pokazac aktywne integracje i typy zbieranych danych.",
         status: "Implemented"
       },
       {
         name: "Dodaj integracje",
-        goal: "Pokazac, ze produkt mozna rozbudowac o nowe zrodla danych.",
+        goal: "Pokazac, ze produkt można rozbudowac o nowe źródła danych.",
         status: "Implemented"
       }
     ],
@@ -90,8 +90,8 @@ export const sections = [
       "Survey delivery przez Slack"
     ],
     nextStep: {
-      title: "Dopiac mapowanie danych do zespolow",
-      body: "Po ekranie integracji kolejnym krokiem jest pokazanie, jak konkretne metryki z GitHub i Jira trafiaja do dashboardu zespolu."
+      title: "Dopiąć mapowanie danych do zespołów",
+      body: "Po ekranie integracji kolejnym krokiem jest pokazanie, jak konkretne metryki z GitHub i Jira trafiają do dashboardu zespołu."
     }
   },
   {
@@ -100,30 +100,30 @@ export const sections = [
     title: "Ankiety",
     short: "Sprint feedback",
     description:
-      "Krotkie ankiety po sprincie, biblioteka pytan i dodatkowe pytania kontekstowe dla release oraz retrospektyw.",
+      "Krótkie ankiety po sprincie, biblioteka pytań i dodatkowe pytania kontekstowe dla release oraz retrospektyw.",
     heroTitle: "Sprint Survey jest sercem warstwy feedbackowej produktu.",
     heroCopy:
-      "Kilka stalych pytan po kazdym sprincie pomaga zrozumiec workload, focus, clarity i quality review. Ten feedback uzupelnia dane z narzedzi i nadaje im kontekst.",
+      "Kilka stałych pytań po każdym sprincie pomaga zrozumieć workload, focus, clarity i quality review. Ten feedback uzupełnia dane z narzędzi i nadaje im kontekst.",
     futureItems: [
-      "Przeglad ankiet",
+      "Przegląd ankiet",
       "Konfiguracja ankiety sprintowej",
-      "Biblioteka pytan",
-      "Sugestie pytan AI"
+      "Biblioteka pytań",
+      "Sugestie pytań AI"
     ],
     screens: [
       {
-        name: "Przeglad ankiet",
-        goal: "Pokazac wszystkie typy ankiet i wyroznic Sprint Survey jako core.",
+        name: "Przegląd ankiet",
+        goal: "Pokazać wszystkie typy ankiet i wyróżnić Sprint Survey jako core.",
         status: "Implemented"
       },
       {
         name: "Konfiguracja ankiety sprintowej",
-        goal: "Pokazac kategorie pytan, czestotliwosc i anonimowosc.",
+        goal: "Pokazać kategorie pytań, częstotliwość i anonimowość.",
         status: "Implemented"
       },
       {
-        name: "Biblioteka pytan",
-        goal: "Pokazac gotowe pytania systemowe i podzial na core vs optional.",
+        name: "Biblioteka pytań",
+        goal: "Pokazać gotowe pytania systemowe i podział na core vs optional.",
         status: "Implemented"
       }
     ],
@@ -136,30 +136,30 @@ export const sections = [
       "Response rate"
     ],
     nextStep: {
-      title: "Podpiac wyniki Sprint Survey do Team Detail",
-      body: "Po builderze i bibliotece pytan kolejnym etapem jest pokazanie wynikow ankiety po sprincie na poziomie konkretnych zespolow."
+      title: "Podpiąć wyniki Sprint Survey do Team Detail",
+      body: "Po builderze i bibliotece pytań kolejnym etapem jest pokazanie wyników ankiety po sprincie na poziomie konkretnych zespołów."
     }
   },
   {
     id: "teams",
     index: "03",
-    title: "Zespoly",
+    title: "Zespoły",
     short: "Widok organizacji",
     description:
-      "Widok organizacji i szczegolowy obraz kazdego zespolu w ostatnich sprintach.",
-    heroTitle: "To tutaj produkt zaczyna wygladac jak prawdziwe narzedzie dla managera.",
+      "Widok organizacji i szczegółowy obraz każdego zespołu w ostatnich sprintach.",
+    heroTitle: "To tutaj produkt zaczyna wyglądać jak prawdziwe narzędzie dla managera.",
     heroCopy:
-      "Mozna szybko porownac zespoly, zobaczyc glowny status, najmocniejsze ryzyko i najmocniejsza strone, a potem wejsc glebiej w historie konkretnego zespolu.",
-    futureItems: ["Przeglad zespolow", "Szczegoly zespolu", "Porownanie trendow miedzy zespolami"],
+      "Można szybko porównać zespoły, zobaczyć główny status, najmocniejsze ryzyko i najmocniejszą stronę, a potem wejść głębiej w historię konkretnego zespołu.",
+    futureItems: ["Przegląd zespołów", "Szczegóły zespołu", "Porównanie trendów między zespołami"],
     screens: [
       {
-        name: "Przeglad zespolow",
-        goal: "Pokazac status wszystkich zespolow i glowne ryzyka.",
+        name: "Przegląd zespołów",
+        goal: "Pokazać status wszystkich zespołów i główne ryzyka.",
         status: "Implemented"
       },
       {
-        name: "Szczegoly zespolu",
-        goal: "Wejsc glebiej w historie Team Alpha.",
+        name: "Szczegóły zespołu",
+        goal: "Wejść głębiej w historię Team Alpha.",
         status: "Implemented"
       }
     ],
@@ -172,8 +172,8 @@ export const sections = [
       "Open comments themes"
     ],
     nextStep: {
-      title: "Przejsc do gotowych insightow i rekomendacji",
-      body: "Mamy juz dane organizacyjne i historie sprintow. Nastepny etap to analiza AI, ktora polaczy te sygnaly w gotowe wnioski."
+      title: "Przejść do gotowych insightów i rekomendacji",
+      body: "Mamy już dane organizacyjne i historię sprintów. Następny etap to analiza AI, która połączy te sygnały w gotowe wnioski."
     }
   },
   {
@@ -182,25 +182,25 @@ export const sections = [
     title: "Wnioski AI",
     short: "Analiza i decyzje",
     description:
-      "Analiza AI, ktora laczy dane delivery, ankiety i komentarze w czytelne wnioski oraz plan dzialan.",
-    heroTitle: "Tutaj produkt przestaje byc dashboardem, a staje sie narzedziem decyzyjnym.",
+      "Analiza AI, która łączy dane delivery, ankiety i komentarze w czytelne wnioski oraz plan działań.",
+    heroTitle: "Tutaj produkt przestaje być dashboardem, a staje się narzędziem decyzyjnym.",
     heroCopy:
-      "Ten widok zbiera sygnaly z wielu miejsc i tlumaczy, co naprawde dzieje sie w zespole. Zamiast samych wykresow sa tutaj priorytety, przyczyny i rekomendowane dzialania.",
-    futureItems: ["Najwazniejsze sygnaly", "Rozszerzona analiza AI", "Plan dzialan"],
+      "Ten widok zbiera sygnały z wielu miejsc i tłumaczy, co naprawdę dzieje się w zespole. Zamiast samych wykresów są tutaj priorytety, przyczyny i rekomendowane działania.",
+    futureItems: ["Najważniejsze sygnały", "Rozszerzona analiza AI", "Plan działań"],
     screens: [
       {
-        name: "Najwazniejsze sygnaly",
-        goal: "Pokazac liste najwazniejszych wnioskow i trendow.",
+        name: "Najważniejsze sygnały",
+        goal: "Pokazać listę najważniejszych wniosków i trendów.",
         status: "Implemented"
       },
       {
         name: "Rozszerzona analiza AI",
-        goal: "Pokazac polaczenie delivery, ankiet i komentarzy.",
+        goal: "Pokazac połączenie delivery, ankiet i komentarzy.",
         status: "Implemented"
       },
       {
-        name: "Plan dzialan",
-        goal: "Pokazac dzialania, wlascicieli i review date.",
+        name: "Plan działań",
+        goal: "Pokazac działania, właścicieli i review date.",
         status: "Implemented"
       }
     ],
@@ -213,8 +213,8 @@ export const sections = [
       "Suggested action"
     ],
     nextStep: {
-      title: "Domknac guardrails i governance",
-      body: "Po analizie i action plannerze kolejnym etapem jest pokazanie, jak produkt chroni przed zlym uzyciem KPI i ankiet."
+      title: "Domknąć guardrails i governance",
+      body: "Po analizie i action plannerze kolejnym etapem jest pokazanie, jak produkt chroni przed złym użyciem KPI i ankiet."
     }
   },
   {
@@ -223,20 +223,20 @@ export const sections = [
     title: "Zasady",
     short: "Bezpieczne KPI",
     description:
-      "Zasady widocznosci, anonimowosci i bezpiecznej interpretacji KPI oraz ankiet.",
+      "Zasady widoczności, anonimowosci i bezpiecznej interpretacji KPI oraz ankiet.",
     heroTitle: "Guardrails to nie dodatek. To czesc przewagi produktu.",
     heroCopy:
-      "Tutaj widac, jak system chroni zespoly przed zlym uzyciem metryk. Wyniki sa czytelne dla managerow, ale nie zamieniaja ludzi w rankingi ani nie niszcza zaufania do ankiet.",
-    futureItems: ["Bezpieczne KPI", "Zasady ankiet", "Zasady prywatnosci"],
+      "Tutaj widać, jak system chroni zespoły przed złym użyciem metryk. Wyniki są czytelne dla managerów, ale nie zamieniają ludzi w rankingi ani nie niszczą zaufania do ankiet.",
+    futureItems: ["Bezpieczne KPI", "Zasady ankiet", "Zasady prywatności"],
     screens: [
       {
         name: "Bezpieczne KPI",
-        goal: "Pokazac zle KPI i bezpieczniejsze alternatywy.",
+        goal: "Pokazac złe KPI i bezpieczniejsze alternatywy.",
         status: "Implemented"
       },
       {
         name: "Zasady ankiet",
-        goal: "Pokazac zasady anonimowosci, dostepu i stalych pytan.",
+        goal: "Pokazać zasady anonimowości, dostępu i stałych pytań.",
         status: "Implemented"
       }
     ],
@@ -248,7 +248,7 @@ export const sections = [
     ],
     nextStep: {
       title: "Przygotowac finalny polish i flow prezentacji",
-      body: "Po guardrails zostaje juz dopracowanie narracji prezentacyjnej, drobny polish wizualny i ewentualne screenshots do dokumentacji."
+      body: "Po guardrails zostaje już dopracowanie narracji prezentacyjnej, drobny polish wizualny i ewentualne screenshots do dokumentacji."
     }
   }
 ];
@@ -258,7 +258,7 @@ export const integrationsOverview = {
     { label: "Aktywne integracje", value: "4 / 4", note: "GitHub, Jira, Slack, CI/CD" },
     { label: "Automatyczne metryki", value: "12", note: "Delivery, quality i predictability" },
     { label: "Ostatnia synchronizacja", value: "08:42", note: "Dane odswiezone 6 min temu" },
-    { label: "Pokrycie organizacji", value: "3 zespoly", note: "Alpha, Beta, Gamma" }
+    { label: "Pokrycie organizacji", value: "3 zespoły", note: "Alpha, Beta, Gamma" }
   ],
   connected: [
     {
@@ -268,16 +268,16 @@ export const integrationsOverview = {
       lastSync: "6 min temu",
       description: "Zrodlo danych o PR-ach, review time i merge flow.",
       metrics: ["PR review time", "Merge lead time", "PR size", "Review load"],
-      usage: "Uzywane do analizy delivery quality i przeciazenia reviewerow."
+      usage: "Używane do analizy delivery quality i przeciążenia reviewerów."
     },
     {
       name: "Jira",
       status: "connected",
       owner: "Delivery Operations",
       lastSync: "4 min temu",
-      description: "Zrodlo danych o przeplywie pracy i stabilnosci sprintu.",
+      description: "Źródło danych o przepływie pracy i stabilności sprintu.",
       metrics: ["Throughput", "Cycle time", "Lead time", "Planned vs unplanned work"],
-      usage: "Uzywane do mierzenia flow, przewidywalnosci i presji pracy pilnej."
+      usage: "Uzywane do mierzenia flow, przewidywalności i presji pracy pilnej."
     },
     {
       name: "Slack",
@@ -309,7 +309,7 @@ export const integrationsOverview = {
       name: "Linear",
       category: "Work tracking",
       preview: "Cycle time, issue flow, roadmap delivery",
-      note: "Dla zespolow produktowych pracujacych poza Jira."
+      note: "Dla zespołów produktowych pracujacych poza Jira."
     },
     {
       name: "Microsoft Teams",
@@ -321,19 +321,19 @@ export const integrationsOverview = {
       name: "PagerDuty",
       category: "Incident data",
       preview: "Incident load, on-call pressure, MTTR",
-      note: "Dodatkowy kontekst quality i stability dla zespolow produkcyjnych."
+      note: "Dodatkowy kontekst quality i stability dla zespołów produkcyjnych."
     }
   ],
   mappingFlow: [
     {
       source: "GitHub + Jira",
       output: "Cycle time, lead time, review pressure",
-      explanation: "Laczymy flow pracy z danymi o review, zeby zobaczyc czy zespol przyspiesza zdrowo."
+      explanation: "Łączymy flow pracy z danymi o review, żeby zobaczyć, czy zespół przyspiesza zdrowo."
     },
     {
       source: "Jira + CI/CD",
       output: "Throughput vs release stability",
-      explanation: "Wzrost liczby dostarczanych zadan zestawiamy z jakoscia release'ow i defektami po wdrozeniu."
+      explanation: "Wzrost liczby dostarczanych zadan zestawiamy z jakością release'ow i defektami po wdrozeniu."
     },
     {
       source: "Slack survey + open comments",
@@ -346,42 +346,42 @@ export const integrationsOverview = {
 export const surveysOverview = {
   summaryCards: [
     { label: "Aktywne szablony", value: "4", note: "Sprint, Release, Quarterly, Annual" },
-    { label: "Pytania podstawowe", value: "6", note: "Staly zestaw pytan po sprincie" },
-    { label: "Sredni odsetek odpowiedzi", value: "88%", note: "Na podstawie 3 ostatnich sprintow" },
-    { label: "Sugestie AI", value: "Wlaczone", note: "Dla pytan tematycznych i komentarzy" }
+    { label: "Pytania podstawowe", value: "6", note: "Staly zestaw pytań po sprincie" },
+    { label: "Średni odsetek odpowiedzi", value: "88%", note: "Na podstawie 3 ostatnich sprintów" },
+    { label: "Sugestie AI", value: "Wlaczone", note: "Dla pytań tematycznych i komentarzy" }
   ],
   programs: [
     {
       name: "Sprint Survey",
       cadence: "Po kazdym sprincie",
-      length: "6 pytan + 1 komentarz",
+      length: "6 pytań + 1 komentarz",
       owner: "Team Lead / Engineering Manager",
       badge: "Core",
-      purpose: "Glowne zrodlo szybkiego feedbacku jakosciowego do analizy pracy zespolu."
+      purpose: "Główne źródło szybkiego feedbacku jakosciowego do analizy pracy zespołu."
     },
     {
       name: "Release Survey",
-      cadence: "Warunkowo po waznym release",
+      cadence: "Warunkowo po ważnym release",
       length: "4 pytania",
       owner: "Release Lead",
       badge: "Optional",
-      purpose: "Bada confidence, napiecie i jakosc procesu wydawniczego po release."
+      purpose: "Bada confidence, napięcie i jakość procesu wydawniczego po release."
     },
     {
       name: "Quarterly Review",
-      cadence: "Raz na kwartal",
-      length: "10 pytan",
+      cadence: "Raz na kwartał",
+      length: "10 pytań",
       owner: "Engineering Ops / People",
       badge: "Extended",
-      purpose: "Pozwala zobaczyc szersze trendy w procesie, wspolpracy i tooling."
+      purpose: "Pozwala zobaczyć szersze trendy w procesie, współpracy i toolingu."
     },
     {
       name: "Annual Review",
       cadence: "Raz w roku",
-      length: "14 pytan",
+      length: "14 pytań",
       owner: "People Partner + Leadership",
       badge: "Strategic",
-      purpose: "Daje szerszy przeglad kultury pracy, rozwoju i dlugofalowego wellbeing."
+      purpose: "Daje szerszy przegląd kultury pracy, rozwoju i długofalowego wellbeing."
     }
   ],
   sprintBuilder: {
@@ -390,19 +390,19 @@ export const surveysOverview = {
     responseGoal: "Cel: 85% odpowiedzi w 24h",
     categories: [
       { name: "Workload", weight: "High", note: "Czy sprint byl do utrzymania?" },
-      { name: "Focus Time", weight: "High", note: "Czy zespol mial czas na skupiona prace?" },
-      { name: "Clarity", weight: "High", note: "Czy priorytety byly jasne?" },
-      { name: "Review Quality", weight: "Medium", note: "Czy code review dzialalo dobrze?" },
-      { name: "Tooling", weight: "Medium", note: "Czy narzedzia pomagaly czy spowalnialy?" },
-      { name: "Predictability", weight: "Medium", note: "Czy sprint byl przewidywalny?" }
+      { name: "Focus Time", weight: "High", note: "Czy zespół miał czas na skupioną pracę?" },
+      { name: "Clarity", weight: "High", note: "Czy priorytety były jasne?" },
+      { name: "Review Quality", weight: "Medium", note: "Czy code review działało dobrze?" },
+      { name: "Tooling", weight: "Medium", note: "Czy narzędzia pomagały czy spowalniały?" },
+      { name: "Predictability", weight: "Medium", note: "Czy sprint był przewidywalny?" }
     ],
     questions: [
-      "Czy workload w tym sprincie byl do utrzymania?",
-      "Czy zespol mial wystarczajaco duzo czasu na skupiona prace?",
-      "Czy priorytety sprintu byly jasne od poczatku do konca?",
-      "Czy proces code review dzialal dobrze w tym sprincie?",
-      "Czy narzedzia wspieraly prace zamiast ja spowalniac?",
-      "Czy sprint byl przewidywalny i dobrze zaplanowany?"
+      "Czy workload w tym sprincie był do utrzymania?",
+      "Czy zespół miał wystarczająco dużo czasu na skupioną pracę?",
+      "Czy priorytety sprintu były jasne od początku do końca?",
+      "Czy proces code review działał dobrze w tym sprincie?",
+      "Czy narzędzia wspierały pracę zamiast ją spowalniać?",
+      "Czy sprint był przewidywalny i dobrze zaplanowany?"
     ]
   },
   library: [
@@ -410,54 +410,54 @@ export const surveysOverview = {
       category: "Team Health",
       type: "Core",
       examples: [
-        "Czy workload byl do utrzymania?",
-        "Czy zespol mial energie do pracy przez caly sprint?",
-        "Czy tempo pracy bylo zdrowe?"
+        "Czy workload był do utrzymania?",
+        "Czy zespół miał energię do pracy przez cały sprint?",
+        "Czy tempo pracy było zdrowe?"
       ]
     },
     {
       category: "Delivery Experience",
       type: "Core",
       examples: [
-        "Czy sprint byl przewidywalny?",
-        "Czy zespol dostarczal zgodnie z planem?",
-        "Czy zmiany w trakcie sprintu byly pod kontrola?"
+        "Czy sprint był przewidywalny?",
+        "Czy zespół dostarczał zgodnie z planem?",
+        "Czy zmiany w trakcie sprintu były pod kontrolą?"
       ]
     },
     {
       category: "Quality & Stability",
       type: "Optional",
       examples: [
-        "Czy release confidence byl wysoki?",
-        "Czy jakosc zmian byla wystarczajaca?",
-        "Czy tempo review nie obnizylo jakosci?"
+        "Czy release confidence był wysoki?",
+        "Czy jakość zmian była wystarczająca?",
+        "Czy tempo review nie obniżyło jakością"
       ]
     },
     {
       category: "Collaboration",
       type: "Optional",
       examples: [
-        "Czy wspolpraca w zespole przebiegala sprawnie?",
-        "Czy zaleznosci od innych zespolow blokowaly prace?",
-        "Czy blockerami zajmowano sie wystarczajaco szybko?"
+        "Czy współpraca w zespole przebiegała sprawnie?",
+        "Czy zależności od innych zespołów blokowały pracę?",
+        "Czy blockerami zajmowano się wystarczająco szybko?"
       ]
     }
   ],
   aiSuggestions: [
     {
-      prompt: "Chce zbadac przeciazenie po release",
+      prompt: "Chce zbadac przeciążenie po release",
       questions: [
-        "Czy ostatni release zwiekszyl napiecie w zespole bardziej niz zwykle?",
-        "Czy po release pojawilo sie zbyt duzo pracy reaktywnej?",
-        "Czy zespol mial wystarczajaco duzo czasu na quality checks przed wdrozeniem?"
+        "Czy ostatni release zwiększył napięcie w zespole bardziej niż zwykle?",
+        "Czy po release pojawiło się zbyt dużo pracy reaktywnej?",
+        "Czy zespół miał wystarczająco dużo czasu na quality checks przed wdrożeniem?"
       ]
     },
     {
-      prompt: "Chce zbadac jakosc code review",
+      prompt: "Chce zbadac jakość code review",
       questions: [
-        "Czy review bylo wystarczajaco dokladne, a nie tylko szybkie?",
-        "Czy reviewerzy mieli realnie czas na analize zmian?",
-        "Czy tempo merge'ow nie wymuszalo powierzchownego review?"
+        "Czy review było wystarczająco dokładne, a nie tylko szybkie?",
+        "Czy reviewerzy mieli realnie czas na analizę zmian?",
+        "Czy tempo merge'ów nie wymuszało powierzchownego review?"
       ]
     }
   ]
@@ -465,18 +465,18 @@ export const surveysOverview = {
 
 export const teamsOverview = {
   summaryCards: [
-    { label: "Zespoly stabilne", value: "1 / 3", note: "Beta jest obecnie najbardziej stabilna" },
-    { label: "Zespoly do obserwacji", value: "2 / 3", note: "Alpha i Gamma maja mieszane sygnaly" },
-    { label: "Sredni odsetek odpowiedzi", value: "89%", note: "Po ostatnich 3 sprintach" },
-    { label: "Glowny sygnal", value: "Review pressure", note: "Najmocniej widoczne w Team Alpha" }
+    { label: "Zespoły stabilne", value: "1 / 3", note: "Beta jest obecnie najbardziej stabilna" },
+    { label: "Zespoły do obserwacji", value: "2 / 3", note: "Alpha i Gamma maja mieszane sygnały" },
+    { label: "Średni odsetek odpowiedzi", value: "89%", note: "Po ostatnich 3 sprintach" },
+    { label: "Główny sygnał", value: "Review pressure", note: "Najmocniej widoczne w Team Alpha" }
   ],
   dashboard: [
     {
       id: "alpha",
       name: "Team Alpha",
-      mission: "Glowna platforma klienta",
-      manager: "Marta Zielinska",
-      squadSize: "9 osob",
+      mission: "Główna platforma klienta",
+      manager: "Marta Zielińska",
+      squadSize: "9 osób",
       releaseWindow: "Release co 2 tygodnie",
       responseRate: "92%",
       pulse: "3.1 / 5",
@@ -496,14 +496,14 @@ export const teamsOverview = {
       name: "Team Beta",
       mission: "Platforma i integracje",
       manager: "Tomasz Krawiec",
-      squadSize: "7 osob",
+      squadSize: "7 osób",
       releaseWindow: "Release weekly",
       responseRate: "86%",
       pulse: "4.2 / 5",
       status: "healthy",
       statusLabel: "Healthy",
       topRisk: "Zaleznosci od infrastruktury poza zespolem",
-      topStrength: "Stabilny review flow i dobra przewidywalnosc sprintu",
+      topStrength: "Stabilny review flow i dobra przewidywalność sprintu",
       metrics: [
         { label: "Throughput", value: "22 pts", trend: "+2%", tone: "up" },
         { label: "Cycle time", value: "3.2 d", trend: "-0.3 d", tone: "up" },
@@ -515,14 +515,14 @@ export const teamsOverview = {
       id: "gamma",
       name: "Team Gamma",
       mission: "Nowe funkcje biznesowe",
-      manager: "Joanna Lesna",
-      squadSize: "8 osob",
+      manager: "Joanna Leśna",
+      squadSize: "8 osób",
       releaseWindow: "Release co 3 tygodnie",
       responseRate: "88%",
       pulse: "3.6 / 5",
       status: "caution",
       statusLabel: "Caution",
-      topRisk: "Zbyt duzo zmian scope w trakcie sprintu",
+      topRisk: "Zbyt dużo zmian scope w trakcie sprintu",
       topStrength: "Dobry throughput i szybkie dostarczanie nowych funkcji",
       metrics: [
         { label: "Throughput", value: "28 pts", trend: "+11%", tone: "up" },
@@ -535,7 +535,7 @@ export const teamsOverview = {
   details: {
     alpha: {
       aiSummary:
-        "Team Alpha dowozi wiecej pracy niz miesiac temu, ale wzrost throughput idzie razem ze spadkiem focus time, dluzszym review time i wieksza liczba defectow po release. To wyglada na zespol, ktory przyspieszyl kosztem jakosci i obciazenia.",
+        "Team Alpha dowozi więcej pracy niż miesiąc temu, ale wzrost throughput idzie razem ze spadkiem focus time, dłuższym review time i większą liczbą defectów po release. To wygląda na zespół, który przyspieszył kosztem jakości i obciążenia.",
       snapshot: [
         {
           label: "Aktualny status",
@@ -546,7 +546,7 @@ export const teamsOverview = {
         {
           label: "Sprint pulse",
           value: "3.1 / 5",
-          note: "Najnizszy wynik w organizacji",
+          note: "Najniższy wynik w organizacji",
           tone: "caution"
         },
         {
@@ -566,31 +566,31 @@ export const teamsOverview = {
         {
           label: "Workload sustainability",
           score: 2.8,
-          note: "Zespol sygnalizuje zbyt duzo pracy reaktywnej pod koniec sprintu.",
+          note: "Zespół sygnalizuje zbyt dużo pracy reaktywnej pod koniec sprintu.",
           tone: "investigate"
         },
         {
           label: "Focus time",
           score: 2.9,
-          note: "Coraz wiecej przerwan przez pilne poprawki i szybkie review.",
+          note: "Coraz więcej przerwań przez pilne poprawki i szybkie review.",
           tone: "investigate"
         },
         {
           label: "Clarity",
           score: 4.1,
-          note: "Priorytety sa jasne, problem nie lezy w planowaniu celu sprintu.",
+          note: "Priorytety są jasne, problem nie leży w planowaniu celu sprintu.",
           tone: "healthy"
         },
         {
           label: "Review quality",
           score: 3.0,
-          note: "Komentarze wskazuja na pospiech i review robione miedzy spotkaniami.",
+          note: "Komentarze wskazuja na pospiech i review robione między spotkaniami.",
           tone: "caution"
         },
         {
           label: "Tooling support",
           score: 3.6,
-          note: "Narzedzia sa OK, ale release process jest meczacy.",
+          note: "Narzędzia są OK, ale release process jest męczący.",
           tone: "caution"
         }
       ],
@@ -615,7 +615,7 @@ export const teamsOverview = {
           defects: "3",
           workload: "3.2 / 5",
           focus: "3.3 / 5",
-          note: "Wiecej pracy dowiezionej, ale pojawily sie sygnaly przeciazenia."
+          note: "Więcej pracy dowiezionej, ale pojawiły się sygnały przeciążenia."
         },
         {
           name: "Sprint 24.08",
@@ -626,71 +626,71 @@ export const teamsOverview = {
           defects: "5",
           workload: "2.8 / 5",
           focus: "2.9 / 5",
-          note: "Najmocniejsze tempo delivery, ale tez wyrazny koszt jakosci i komfortu pracy."
+          note: "Najmocniejsze tempo delivery, ale też wyraźny koszt jakości i komfortu pracy."
         }
       ],
       commentThemes: [
         {
-          theme: "Presja release na koncu sprintu",
+          theme: "Presja release na końcu sprintu",
           weight: "High",
           tone: "investigate",
-          detail: "Kilka osob wskazuje, ze ostatnie 3 dni sprintu to gaszenie pozarow i szybkie merge'e."
+          detail: "Kilka osób wskazuje, że ostatnie 3 dni sprintu to gaszenie pożarów i szybkie merge'e."
         },
         {
-          theme: "Review miedzy spotkaniami",
+          theme: "Review między spotkaniami",
           weight: "Medium",
           tone: "caution",
-          detail: "Komentarze sugeruja, ze review jest robione szybko i bez spokojnego czasu na analize."
+          detail: "Komentarze sugerują, że review jest robione szybko i bez spokojnego czasu na analizę."
         },
         {
           theme: "Priorytety jasne od poczatku",
           weight: "Low",
           tone: "healthy",
-          detail: "Zespol nie ma problemu z tym, co robic. Problem jest raczej w tempie niz w kierunku."
+          detail: "Zespół nie ma problemu z tym, co robić. Problem jest raczej w tempie niż w kierunku."
         }
       ],
       strengths: [
-        "Dobrze rozumiany cel sprintu i wysoka jasnosc priorytetow.",
-        "Zespol nadal dowozi wazne elementy roadmapy.",
-        "Wysoki response rate pozwala ufac danym z ankiety."
+        "Dobrze rozumiany cel sprintu i wysoka jasność priorytetów.",
+        "Zespół nadal dowozi ważne elementy roadmapy.",
+        "Wysoki response rate pozwala ufać danym z ankiety."
       ],
       risks: [
-        "Szybszy delivery zaczyna podnosic liczbe defectow po release.",
-        "Review time rosnie, mimo ze komentarze sugeruja spadek jakosci review.",
-        "Focus time i workload pogarszaja sie drugi sprint z rzedu."
+        "Szybszy delivery zaczyna podnosić liczbę defectów po release.",
+        "Review time rośnie, mimo że komentarze sugerują spadek jakości review.",
+        "Focus time i workload pogarszają się drugi sprint z rzędu."
       ],
       nextActions: [
-        "Na najblizszy sprint zmniejszyc scope release o 10-15%.",
-        "Zablokowac 2 stale okna na review zamiast robic je ad hoc miedzy spotkaniami.",
-        "Sprawdzic, ktore poprawki po release generuja najwiecej pracy reaktywnej."
+        "Na najbliższy sprint zmniejszyć scope release o 10-15%.",
+        "Zablokować 2 stałe okna na review zamiast robić je ad hoc między spotkaniami.",
+        "Sprawdzić, które poprawki po release generują najwięcej pracy reaktywnej."
       ]
     },
     beta: {
       aiSummary:
-        "Team Beta wyglada najbardziej zdrowo w calej organizacji. Delivery jest stabilne, review dziala sprawnie, a wyniki z ankiety nie pokazuja duzych napiec. To dobry zespol referencyjny do porownania z Alpha i Gamma.",
+        "Team Beta wygląda najbardziej zdrowo w całej organizacji. Delivery jest stabilne, review działa sprawnie, a wyniki z ankiety nie pokazują dużych napięć. To dobry zespół referencyjny do porównania z Alpha i Gamma.",
       snapshot: [
         {
           label: "Aktualny status",
           value: "Healthy",
-          note: "Stabilny rytm sprintow i release",
+          note: "Stabilny rytm sprintów i release",
           tone: "healthy"
         },
         {
           label: "Sprint pulse",
           value: "4.2 / 5",
-          note: "Najwyzszy wynik w organizacji",
+          note: "Najwyższy wynik w organizacji",
           tone: "healthy"
         },
         {
           label: "Escaped defects",
           value: "1",
-          note: "Jakosc stabilna od 3 sprintow",
+          note: "Jakość stabilna od 3 sprintów",
           tone: "healthy"
         },
         {
           label: "Response rate",
           value: "86%",
-          note: "Wystarczajaco mocny sygnal do trendow",
+          note: "Wystarczająco mocny sygnał do trendów",
           tone: "healthy"
         }
       ],
@@ -704,13 +704,13 @@ export const teamsOverview = {
         {
           label: "Focus time",
           score: 4.1,
-          note: "Zespol ma regularne bloki skupionej pracy.",
+          note: "Zespół ma regularne bloki skupionej pracy.",
           tone: "healthy"
         },
         {
           label: "Clarity",
           score: 4.4,
-          note: "Priorytety i zaleznosci sa dobrze komunikowane.",
+          note: "Priorytety i zależności są dobrze komunikowane.",
           tone: "healthy"
         },
         {
@@ -722,7 +722,7 @@ export const teamsOverview = {
         {
           label: "Tooling support",
           score: 3.8,
-          note: "Jedyny czestszy temat to zaleznosci od innego zespolu infrastruktury.",
+          note: "Jedyny częstszy temat to zaleznosci od innego zespołu infrastruktury.",
           tone: "caution"
         }
       ],
@@ -736,7 +736,7 @@ export const teamsOverview = {
           defects: "1",
           workload: "4.1 / 5",
           focus: "4.0 / 5",
-          note: "Rowny sprint bez wiekszych blokad."
+          note: "Równy sprint bez większych blokad."
         },
         {
           name: "Sprint 24.07",
@@ -758,7 +758,7 @@ export const teamsOverview = {
           defects: "1",
           workload: "4.3 / 5",
           focus: "4.1 / 5",
-          note: "Najbardziej przewidywalny zespol w ostatnim cyklu."
+          note: "Najbardziej przewidywalny zespół w ostatnim cyklu."
         }
       ],
       commentThemes: [
@@ -766,44 +766,44 @@ export const teamsOverview = {
           theme: "Dobre planowanie pracy",
           weight: "Medium",
           tone: "healthy",
-          detail: "Komentarze chwala spokojne sprint planning i realistyczny scope."
+          detail: "Komentarze chwalą spokojny sprint planning i realistyczny scope."
         },
         {
           theme: "Zaleznosci od infrastruktury",
           weight: "Low",
           tone: "caution",
-          detail: "Pojawia sie temat czekania na zewnetrzne decyzje platformowe."
+          detail: "Pojawia się temat czekania na zewnętrzne decyzje platformowe."
         }
       ],
       strengths: [
         "Najbardziej stabilny review flow w organizacji.",
-        "Bardzo dobra przewidywalnosc sprintow.",
+        "Bardzo dobra przewidywalność sprintów.",
         "Niski poziom pracy reaktywnej po wdrozeniach."
       ],
       risks: [
-        "Ryzyko zaleznosci od zespolow poza Beta.",
-        "Mozliwe spowolnienie, jesli pojawi sie wiecej pilnych zgloszen integracyjnych."
+        "Ryzyko zaleznosci od zespołów poza Beta.",
+        "Możliwe spowolnienie, jeśli pojawi się więcej pilnych zgłoszeń integracyjnych."
       ],
       nextActions: [
-        "Uzyc Team Beta jako benchmarku dobrych praktyk review.",
-        "Spisac ich rytm sprint planning i sharing blockers.",
-        "Monitorowac zaleznosci z infrastruktura, zanim stana sie czestym blockerem."
+        "Użyć Team Beta jako benchmarku dobrych praktyk review.",
+        "Spisać ich rytm sprint planning i sharing blockers.",
+        "Monitorować zależności z infrastrukturą, zanim staną się częstym blockerem."
       ]
     },
     gamma: {
       aiSummary:
-        "Team Gamma nadal dostarcza szybko, ale ich flow robi sie coraz mniej przewidywalny. Ankiety nie pokazuja kryzysu jak w Alpha, ale widac rosnace zmeczenie zmianami zakresu prac i wieksza liczbe poprawek po sprintach.",
+        "Team Gamma nadal dostarcza szybko, ale ich flow robi się coraz mniej przewidywalny. Ankiety nie pokazują kryzysu jak w Alpha, ale widać rosnące zmęczenie zmianami zakresu prac i większą liczbę poprawek po sprintach.",
       snapshot: [
         {
           label: "Aktualny status",
           value: "Caution",
-          note: "Dobre tempo, ale slabsza przewidywalnosc",
+          note: "Dobre tempo, ale słabsza przewidywalność",
           tone: "caution"
         },
         {
           label: "Sprint pulse",
           value: "3.6 / 5",
-          note: "Srodek stawki w organizacji",
+          note: "Środek stawki w organizacji",
           tone: "caution"
         },
         {
@@ -815,7 +815,7 @@ export const teamsOverview = {
         {
           label: "Response rate",
           value: "88%",
-          note: "Dane wystarczajace do trendow",
+          note: "Dane wystarczające do trendów",
           tone: "healthy"
         }
       ],
@@ -823,13 +823,13 @@ export const teamsOverview = {
         {
           label: "Workload sustainability",
           score: 3.4,
-          note: "Workload jeszcze akceptowalny, ale czuc wiecej zmian w trakcie sprintu.",
+          note: "Workload jeszcze akceptowalny, ale czuć więcej zmian w trakcie sprintu.",
           tone: "caution"
         },
         {
           label: "Focus time",
           score: 3.5,
-          note: "Focus rozbijany przez czeste korekty scope i pytania produktowe.",
+          note: "Focus rozbijany przez częste korekty scope i pytania produktowe.",
           tone: "caution"
         },
         {
@@ -841,13 +841,13 @@ export const teamsOverview = {
         {
           label: "Review quality",
           score: 3.7,
-          note: "Review jest calkiem dobre, ale pojawia sie wiecej pospiechu przy koncowce sprintu.",
+          note: "Review jest całkiem dobre, ale pojawia się więcej pośpiechu przy końcówce sprintu.",
           tone: "caution"
         },
         {
           label: "Tooling support",
           score: 3.9,
-          note: "Narzedzia nie sa problemem, wiekszy wplyw ma zmienny scope.",
+          note: "Narzędzia nie są problemem, większy wpływ ma zmienny scope.",
           tone: "healthy"
         }
       ],
@@ -872,7 +872,7 @@ export const teamsOverview = {
           defects: "2",
           workload: "3.6 / 5",
           focus: "3.6 / 5",
-          note: "Pojawia sie wiecej zmian zakresu w polowie sprintu."
+          note: "Pojawia się więcej zmian zakresu w połowie sprintu."
         },
         {
           name: "Sprint 24.08",
@@ -883,43 +883,43 @@ export const teamsOverview = {
           defects: "3",
           workload: "3.4 / 5",
           focus: "3.5 / 5",
-          note: "Wiecej pracy dowiezionej, ale kosztem przewidywalnosci i wiekszej liczby poprawek."
+          note: "Więcej pracy dowiezionej, ale kosztem przewidywalności i większej liczby poprawek."
         }
       ],
       commentThemes: [
         {
-          theme: "Zmieniajacy sie scope sprintu",
+          theme: "Zmieniający się scope sprintu",
           weight: "High",
           tone: "investigate",
-          detail: "Najczesciej powtarzany komentarz dotyczy zmiany kierunku pracy po srodku sprintu."
+          detail: "Najczęściej powtarzany komentarz dotyczy zmiany kierunku pracy po środku sprintu."
         },
         {
           theme: "Szybkie wsparcie produktowe",
           weight: "Low",
           tone: "healthy",
-          detail: "Pozytywny sygnal: zespol dobrze wspolpracuje z product managerem mimo zmian."
+          detail: "Pozytywny sygnał: zespół dobrze współpracuje z product managerem mimo zmian."
         },
         {
-          theme: "Koncowka sprintu bardziej napieta",
+          theme: "Końcówka sprintu bardziej napięta",
           weight: "Medium",
           tone: "caution",
-          detail: "Kilka osob wskazuje, ze koncowka sprintu jest coraz mniej przewidywalna."
+          detail: "Kilka osób wskazuje, że końcówka sprintu jest coraz mniej przewidywalna."
         }
       ],
       strengths: [
         "Wysoki throughput i dobra reakcja na potrzeby biznesowe.",
-        "Dobry poziom wspolpracy z product managerem.",
-        "Brak mocnych problemow narzedziowych."
+        "Dobry poziom współpracy z product managerem.",
+        "Brak mocnych problemów narzędziowych."
       ],
       risks: [
-        "Spadek clarity moze szybko przelozyc sie na wiekszy chaos delivery.",
-        "Rosnaca liczba defectow przy nowych funkcjach.",
-        "Zmienny scope moze z czasem obnizyc zaufanie zespolu do planowania sprintu."
+        "Spadek clarity może szybko przełożyć się na większy chaos delivery.",
+        "Rosnąca liczba defects przy nowych funkcjach.",
+        "Zmienny scope może z czasem obniżyć zaufanie zespołu do planowania sprintu."
       ],
       nextActions: [
-        "Ograniczyc liczbe zmian scope po midpoint review sprintu.",
-        "Dodac prosty release checklist dla nowych funkcji biznesowych.",
-        "Na nastepnym retro sprawdzic, ktore zmiany byly naprawde konieczne, a ktore mogly poczekac."
+        "Ograniczyć liczbę zmian scope po midpoint review sprintu.",
+        "Dodać prosty release checklist dla nowych funkcji biznesowych.",
+        "Na następnym retro sprawdzić, które zmiany były naprawdę konieczne, a które mogły poczekać."
       ]
     }
   }
@@ -927,28 +927,28 @@ export const teamsOverview = {
 
 export const insightsOverview = {
   summaryCards: [
-    { label: "Otwarte sygnaly", value: "4", note: "2 wysokie, 2 srednie" },
-    { label: "Zespoly do dzialania", value: "2 / 3", note: "Alpha i Gamma" },
-    { label: "Najwyzsza pewnosc", value: "92%", note: "Alpha: workload + quality" },
-    { label: "Zaplanowane dzialania", value: "7", note: "Na najblizsze 2 sprinty" }
+    { label: "Otwarte sygnały", value: "4", note: "2 wysokie, 2 średnie" },
+    { label: "Zespoły do działania", value: "2 / 3", note: "Alpha i Gamma" },
+    { label: "Najwyższa pewność", value: "92%", note: "Alpha: workload + quality" },
+    { label: "Zaplanowane działania", value: "7", note: "Na najbliższe 2 sprinty" }
   ],
   topSignals: [
     {
-      title: "Delivery rosnie szybciej niz quality",
+      title: "Delivery rośnie szybciej niż quality",
       level: "High",
       tone: "investigate",
       summary:
-        "W Team Alpha wzrost throughput i szybszy release nie ida w parze ze stabilnoscia jakosciowa.",
+        "W Team Alpha wzrost throughput i szybszy release nie idą w parze ze stabilnością jakościową.",
       scope: "Team Alpha",
       confidence: "92%",
       evidence: "GitHub + Jira + CI/CD + Sprint Survey"
     },
     {
-      title: "Sprint scope staje sie mniej przewidywalny",
+      title: "Sprint scope staje się mniej przewidywalny",
       level: "Medium",
       tone: "caution",
       summary:
-        "Team Gamma nadal dowozi, ale czesciej zmienia kierunek pracy w trakcie sprintu i traci clarity.",
+        "Team Gamma nadal dowozi, ale częściej zmienia kierunek pracy w trakcie sprintu i traci clarity.",
       scope: "Team Gamma",
       confidence: "84%",
       evidence: "Jira + Sprint Survey + comments"
@@ -967,102 +967,102 @@ export const insightsOverview = {
   byTeam: {
     alpha: {
       executiveSummary:
-        "AI laczy tutaj trzy sygnaly: wiekszy throughput, gorszy workload score i rosnace defects po release. To nie wyglada jak zdrowa poprawa efektywnosci, tylko jak przyspieszenie kosztem jakosci i czasu na review.",
+        "AI łączy tutaj trzy sygnały: większy throughput, gorszy workload score i rosnące defects po release. To nie wygląda jak zdrowa poprawa efektywności, tylko jak przyspieszenie kosztem jakości i czasu na review.",
       explanations: [
         {
           title: "Throughput sam w sobie nie oznacza poprawy",
           weight: "High",
           tone: "investigate",
           detail:
-            "Team Alpha dostarczyl wiecej punktow niz w poprzednim sprincie, ale cycle time, review time i escaped defects poszly w gore razem z nim."
+            "Team Alpha dostarczył więcej punktów niż w poprzednim sprincie, ale cycle time, review time i escaped defects poszły w górę razem z nim."
         },
         {
-          title: "Survey potwierdza przeciazenie, a nie tylko gorszy nastroj",
+          title: "Survey potwierdza przeciążenie, a nie tylko gorszy nastrój",
           weight: "High",
           tone: "investigate",
           detail:
-            "Workload i focus time spadaja przez dwa sprinty z rzedu, a open comments opisuja prace reaktywna i review robione pod presja."
+            "Workload i focus time spadają przez dwa sprinty z rzędu, a open comments opisują pracę reaktywną i review robione pod presją."
         },
         {
           title: "Problem nie dotyczy clarity",
           weight: "Medium",
           tone: "healthy",
           detail:
-            "Priorytety i cele sprintu sa jasne, wiec zrodel problemu trzeba szukac w tempie release i sposobie pracy przy koncowce sprintu."
+            "Priorytety i cele sprintu są jasne, więc źródeł problemu trzeba szukać w tempie release i sposobie pracy przy końcówce sprintu."
         }
       ],
       evidenceChain: [
         {
           signal: "GitHub review time",
-          finding: "Review time wzrosl z 22 h do 31 h w 3 sprintach",
-          whyItMatters: "Dluzszy review bez poprawy quality sugeruje przeciazenie reviewerow albo review odkladane na pozniej."
+          finding: "Review time wzrósł z 22 h do 31 h w 3 sprintach",
+          whyItMatters: "Dłuższy review bez poprawy quality sugeruje przeciążenie reviewerów albo review odkładane na później."
         },
         {
           signal: "Jira throughput vs cycle time",
-          finding: "Throughput rosnie, ale cycle time nie spada",
-          whyItMatters: "To oznacza, ze zespol nie pracuje plyniej, tylko wypycha wiecej pracy przy wiekszym obciazeniu procesu."
+          finding: "Throughput rośnie, ale cycle time nie spada",
+          whyItMatters: "To oznacza, że zespół nie pracuje płynniej, tylko wypycha więcej pracy przy większym obciążeniu procesu."
         },
         {
           signal: "CI/CD defects",
-          finding: "Escaped defects wzrosly z 2 do 5",
-          whyItMatters: "Rosnacy koszt quality potwierdza, ze przyspieszenie nie jest darmowe."
+          finding: "Escaped defects wzrosły z 2 do 5",
+          whyItMatters: "Rosnący koszt quality potwierdza, że przyspieszenie nie jest darmowe."
         },
         {
           signal: "Sprint Survey",
           finding: "Workload 2.8 / 5, Focus 2.9 / 5",
-          whyItMatters: "Ludzie odczuwaja skutki tego wzorca jeszcze zanim problem stanie sie bardzo widoczny finansowo."
+          whyItMatters: "Ludzie odczuwają skutki tego wzorca jeszcze zanim problem stanie się bardzo widoczny finansowo."
         }
       ],
       correlations: [
         {
           pair: "Throughput vs defects",
-          reading: "Zespol dowozi wiecej pracy, ale jednoczesnie zwieksza liczbe poprawek po release.",
+          reading: "Zespół dowozi więcej pracy, ale jednocześnie zwiększa liczbę poprawek po release.",
           verdict: "Unhealthy tradeoff",
           tone: "investigate"
         },
         {
           pair: "Review time vs review quality",
-          reading: "Wiecej czasu w review nie poprawia quality, bo review dzieje sie pod presja i w zlym momencie dnia.",
+          reading: "Więcej czasu w review nie poprawia quality, bo review dzieje się pod presją i w złym momencie dnia.",
           verdict: "Process issue",
           tone: "caution"
         },
         {
           pair: "Clarity vs workload",
-          reading: "Dobra clarity nie chroni zespolu przed przeciazeniem, jesli release flow jest zbyt agresywny.",
+          reading: "Dobra clarity nie chroni zespołu przed przeciążeniem, jeśli release flow jest zbyt agresywny.",
           verdict: "Important nuance",
           tone: "healthy"
         }
       ],
       plainLanguage:
-        "Team Alpha nie ma problemu z tym, co trzeba zrobic. Problem jest taki, ze zespol robi za duzo naraz, za szybko dochodzi do koncowki sprintu i potem placi za to jakoscia oraz zmeczeniem.",
+        "Team Alpha nie ma problemu z tym, co trzeba zrobić. Problem jest taki, że zespół robi za dużo naraz, za szybko dochodzi do końcówki sprintu i potem płaci za to jakością oraz zmęczeniem.",
       actionPlan: [
         {
-          title: "Zmniejszyc release scope na 2 sprinty testowe",
+          title: "Zmniejszyć release scope na 2 sprinty testowe",
           description:
-            "Na dwa kolejne sprinty ograniczyc planowany zakres release, zeby sprawdzic czy spadnie review pressure i liczba poprawek po wdrozeniu.",
-          owner: "Marta Zielinska",
+            "Na dwa kolejne sprinty ograniczyć planowany zakres release, żeby sprawdzić, czy spadnie review pressure i liczba poprawek po wdrożeniu.",
+          owner: "Marta Zielińska",
           reviewDate: "Po Sprincie 24.10",
           expectedImpact: "Mniej pracy reaktywnej i lepszy focus time",
           priority: "High",
           tone: "investigate"
         },
         {
-          title: "Wprowadzic stale okna review",
+          title: "Wprowadzić stałe okna review",
           description:
-            "Dwa bloki review dziennie zamiast review robionego miedzy spotkaniami i na koncu dnia.",
+            "Dwa bloki review dziennie zamiast review robionego między spotkaniami i na końcu dnia.",
           owner: "Senior Engineers",
           reviewDate: "Po 10 dniach",
-          expectedImpact: "Krotszy review time i lepsza jakosc decyzji",
+          expectedImpact: "Krótszy review time i lepsza jakość decyzji",
           priority: "High",
           tone: "investigate"
         },
         {
-          title: "Przeanalizowac zrodla escaped defects",
+          title: "Przeanalizować źródła escaped defects",
           description:
-            "Sprawdzic, ktore typy zmian najczesciej wracaja po release i czy mozna dodac prosty quality gate.",
+            "Sprawdzić, które typy zmian najczęściej wracają po release i czy można dodać prosty quality gate.",
           owner: "Release Lead",
-          reviewDate: "Na nastepnym retro",
-          expectedImpact: "Mniej poprawek po wdrozeniu",
+          reviewDate: "Na następnym retro",
+          expectedImpact: "Mniej poprawek po wdrożeniu",
           priority: "Medium",
           tone: "caution"
         }
@@ -1070,73 +1070,73 @@ export const insightsOverview = {
     },
     beta: {
       executiveSummary:
-        "Team Beta daje obraz zdrowego przeplywu pracy. Delivery jest spokojne, review szybkie, a survey nie sygnalizuje przeciazenia. Dla organizacji to dobry benchmark, a nie obszar alarmowy.",
+        "Team Beta daje obraz zdrowego przepływu pracy. Delivery jest spokojne, review szybkie, a survey nie sygnalizuje przeciążenia. Dla organizacji to dobry benchmark, a nie obszar alarmowy.",
       explanations: [
         {
-          title: "Stabilnosc jest tutaj przewaga",
+          title: "Stabilność jest tutaj przewagą",
           weight: "Medium",
           tone: "healthy",
           detail:
-            "Beta nie ma najbardziej spektakularnego throughput, ale ma najlepsze polaczenie quality, predictability i team health."
+            "Beta nie ma najbardziej spektakularnego throughput, ale ma najlepsze połączenie quality, predictability i team health."
         },
         {
-          title: "Survey i metryki mowia to samo",
+          title: "Survey i metryki mówią to samo",
           weight: "Medium",
           tone: "healthy",
           detail:
-            "Wysokie focus time i workload score dobrze zgadzaja sie z krotkim cycle time i niska liczba defects."
+            "Wysokie focus time i workload score dobrze zgadzają się z krótkim cycle time i niską liczbą defects."
         }
       ],
       evidenceChain: [
         {
           signal: "GitHub review flow",
-          finding: "Review utrzymuje sie na poziomie 12-13 h",
-          whyItMatters: "To wyglada na zdrowy rytm wspolpracy bez duzych zaleglosci."
+          finding: "Review utrzymuje się na poziomie 12-13 h",
+          whyItMatters: "To wygląda na zdrowy rytm współpracy bez dużych zaległości."
         },
         {
           signal: "Jira predictability",
           finding: "Cycle time stopniowo spada i jest stabilny",
-          whyItMatters: "Zespol konczy sprinty bez duzych zrywow i pracy reaktywnej."
+          whyItMatters: "Zespół kończy sprinty bez dużych zrywów i pracy reaktywnej."
         },
         {
           signal: "Sprint Survey",
           finding: "Workload 4.3 / 5, Focus 4.1 / 5",
-          whyItMatters: "Ludzie potwierdzaja, ze proces jest do utrzymania."
+          whyItMatters: "Ludzie potwierdzają, że proces jest do utrzymania."
         }
       ],
       correlations: [
         {
           pair: "Review time vs quality",
-          reading: "Szybkie review nie obniza quality, bo tempo jest stabilne i przewidywalne.",
+          reading: "Szybkie review nie obniża quality, bo tempo jest stabilne i przewidywalne.",
           verdict: "Healthy pattern",
           tone: "healthy"
         },
         {
           pair: "Throughput vs workload",
-          reading: "Zespol nie musi zwiekszac throughput za wszelka cene, zeby utrzymac dobry wynik biznesowy.",
+          reading: "Zespół nie musi zwiększać throughput za wszelką cenę, żeby utrzymać dobry wynik biznesowy.",
           verdict: "Balanced",
           tone: "healthy"
         }
       ],
       plainLanguage:
-        "Beta pokazuje, ze dobry wynik nie musi oznaczac ciaglego dociskania zespolu. Oni pracuja spokojnie i wlasnie dlatego sa przewidywalni.",
+        "Beta pokazuje, że dobry wynik nie musi oznaczać ciągłego dociskania zespołu. Oni pracują spokojnie i właśnie dlatego są przewidywalni.",
       actionPlan: [
         {
-          title: "Zachowac obecny rytm sprintow",
-          description: "Nie zmieniac procesu na sile, tylko utrzymac obecne praktyki review i planowania.",
+          title: "Zachować obecny rytm sprintów",
+          description: "Nie zmieniać procesu na siłę, tylko utrzymać obecne praktyki review i planowania.",
           owner: "Tomasz Krawiec",
-          reviewDate: "Za 1 miesiac",
+          reviewDate: "Za 1 miesiąc",
           expectedImpact: "Utrzymanie stabilnego benchmarku",
           priority: "Low",
           tone: "healthy"
         },
         {
-          title: "Udokumentowac praktyki Beta dla innych zespolow",
+          title: "Udokumentować praktyki Beta dla innych zespołów",
           description:
-            "Spisac, jak wyglada ich sprint planning, review flow i praca z blockerami, zeby wykorzystac to jako wzorzec w Alpha i Gamma.",
+            "Spisać, jak wygląda ich sprint planning, review flow i praca z blockerami, żeby wykorzystać to jako wzorzec w Alpha i Gamma.",
           owner: "Engineering Ops",
-          reviewDate: "Na przegladzie kwartalnym",
-          expectedImpact: "Lepsze standardy pracy w calej organizacji",
+          reviewDate: "Na przeglądzie kwartalnym",
+          expectedImpact: "Lepsze standardy pracy w całej organizacji",
           priority: "Medium",
           tone: "healthy"
         }
@@ -1144,73 +1144,73 @@ export const insightsOverview = {
     },
     gamma: {
       executiveSummary:
-        "Team Gamma nie jest w kryzysie, ale ich flow robi sie coraz bardziej chaotyczny. Najwiekszym tematem nie jest tutaj przeciazenie release jak w Alpha, tylko spadek przewidywalnosci i clarity przez zmieniajacy sie scope sprintu.",
+        "Team Gamma nie jest w kryzysie, ale ich flow robi się coraz bardziej chaotyczny. Największym tematem nie jest tutaj przeciążenie release jak w Alpha, tylko spadek przewidywalności i clarity przez zmieniający się scope sprintu.",
       explanations: [
         {
-          title: "Produkt zmienia kierunek pracy zbyt czesto",
+          title: "Produkt zmienia kierunek pracy zbyt często",
           weight: "High",
           tone: "investigate",
           detail:
-            "Komentarze i wyniki clarity pokazuja, ze zespol reaguje na zbyt wiele zmian po srodku sprintu."
+            "Komentarze i wyniki clarity pokazują, że zespół reaguje na zbyt wiele zmian po środku sprintu."
         },
         {
           title: "Throughput jeszcze maskuje problem",
           weight: "Medium",
           tone: "caution",
           detail:
-            "Na pierwszy rzut oka Gamma dowozi wiecej, ale za ta liczba stoi coraz mniej przewidywalny proces i wiecej poprawek."
+            "Na pierwszy rzut oka Gamma dowozi więcej, ale za ta liczba stoi coraz mniej przewidywalny proces i więcej poprawek."
         }
       ],
       evidenceChain: [
         {
           signal: "Jira scope change",
-          finding: "Wzrost zmian priorytetow po midpoint review",
-          whyItMatters: "To obniza przewidywalnosc i zwieksza koszt przelaczania kontekstu."
+          finding: "Wzrost zmian priorytetów po midpoint review",
+          whyItMatters: "To obniża przewidywalność i zwiększa koszt przełączania kontekstu."
         },
         {
           signal: "Survey clarity",
-          finding: "Clarity spadlo do 3.2 / 5",
-          whyItMatters: "Zespol przestaje ufac, ze plan sprintu jest stabilny."
+          finding: "Clarity spadło do 3.2 / 5",
+          whyItMatters: "Zespół przestaje ufać, że plan sprintu jest stabilny."
         },
         {
           signal: "Defects",
-          finding: "Escaped defects wzrosly z 2 do 3",
-          whyItMatters: "Nowe funkcje dowozone pod presja czesciej wracaja do poprawy."
+          finding: "Escaped defects wzrosły z 2 do 3",
+          whyItMatters: "Nowe funkcje dowozone pod presja częściej wracaja do poprawy."
         }
       ],
       correlations: [
         {
           pair: "Scope change vs focus time",
-          reading: "Im wiecej zmian w trakcie sprintu, tym trudniej utrzymac spokojna prace nad zaplanowanymi zadaniami.",
+          reading: "Im więcej zmian w trakcie sprintu, tym trudniej utrzymać spokojną pracę nad zaplanowanymi zadaniami.",
           verdict: "Growing friction",
           tone: "caution"
         },
         {
           pair: "Throughput vs predictability",
-          reading: "Zespol dalej dowozi, ale coraz mniej wiadomo, jakim kosztem i czy ten wynik da sie utrzymac.",
+          reading: "Zespół dalej dowozi, ale coraz mniej wiadomo, jakim kosztem i czy ten wynik da się utrzymać.",
           verdict: "Risk building up",
           tone: "investigate"
         }
       ],
       plainLanguage:
-        "Gamma jeszcze wyglada dobrze na wykresach delivery, ale pod spodem zaczyna brakowac stabilnosci. Jesli scope dalej bedzie sie tak zmienial, to za chwile problem bedzie juz w quality i morale.",
+        "Gamma jeszcze wygląda dobrze na wykresach delivery, ale pod spodem zaczyna brakować stabilności. Jeśli scope dalej będzie się tak zmieniać, to za chwilę problem będzie już w quality i morale.",
       actionPlan: [
         {
-          title: "Ograniczyc zmiany scope po midpoint review",
+          title: "Ograniczyć zmiany scope po midpoint review",
           description:
-            "Wprowadzic prosta zasade: po polowie sprintu zmieniamy priorytety tylko przy jasno uzasadnionym wyjatku.",
-          owner: "Joanna Lesna + PM",
+            "Wprowadzić prostą zasadę: po połowie sprintu zmieniamy priorytety tylko przy jasno uzasadnionym wyjątku.",
+          owner: "Joanna Leśna + PM",
           reviewDate: "Po 2 sprintach",
-          expectedImpact: "Lepsza clarity i przewidywalnosc",
+          expectedImpact: "Lepsza clarity i przewidywalność",
           priority: "High",
           tone: "investigate"
         },
         {
-          title: "Wdrozyc release checklist dla nowych funkcji",
+          title: "Wdrożyć release checklist dla nowych funkcji",
           description:
-            "Krotka lista kontroli przed release ma ograniczyc liczbe drobnych poprawek po wdrozeniu.",
+            "Krótka lista kontroli przed release ma ograniczyć liczbę drobnych poprawek po wdrożeniu.",
           owner: "Feature Lead",
-          reviewDate: "Po nastepnym release",
+          reviewDate: "Po następnym release",
           expectedImpact: "Mniej escaped defects",
           priority: "Medium",
           tone: "caution"
@@ -1223,66 +1223,66 @@ export const insightsOverview = {
 export const governanceOverview = {
   summaryCards: [
     { label: "Zablokowane KPI", value: "5", note: "FlowScope nie promuje rankingow ludzi" },
-    { label: "Minimalna anonimowosc", value: "5 odpowiedzi", note: "Mniej odpowiedzi = brak widoku wynikow" },
-    { label: "Role z dostepem", value: "4", note: "Kazda rola ma inny poziom widocznosci" },
+    { label: "Minimalna anonimowość", value: "5 odpowiedzi", note: "Mniej odpowiedzi = brak widoku wyników" },
+    { label: "Role z dostępem", value: "4", note: "Każda rola ma inny poziom widoczności" },
     { label: "Stale zasady ankiet", value: "6", note: "Podstawowe reguly dla Sprint Survey" }
   ],
   guardrails: [
     {
-      unsafeKpi: "Ranking developerow po liczbie commitow",
-      risk: "Zacheca do sztucznej aktywnosci i nie mowi nic o quality, review ani realnym wplywie pracy.",
+      unsafeKpi: "Ranking developerów po liczbie commitów",
+      risk: "Zachęca do sztucznej aktywności i nie mówi nic o quality, review ani realnym wpływie pracy.",
       saferAlternative: "Team-level flow trends + quality signals",
-      framing: "Patrzymy na rytm pracy zespolu, a nie kto kliknal najwiecej."
+      framing: "Patrzymy na rytm pracy zespołu, a nie kto kliknal najwięcej."
     },
     {
-      unsafeKpi: "Throughput jako jedyny wskaznik sukcesu",
-      risk: "Moze ukryc przeciazenie, spadek focus time i wzrost defects po release.",
+      unsafeKpi: "Throughput jako jedyny wskaźnik sukcesu",
+      risk: "Moze ukryc przeciążenie, spadek focus time i wzrost defects po release.",
       saferAlternative: "Throughput razem z quality, workload i predictability",
-      framing: "Wiecej dowiezionej pracy ma sens tylko wtedy, gdy nie psuje procesu."
+      framing: "Więcej dowiezionej pracy ma sens tylko wtedy, gdy nie psuje procesu."
     },
     {
-      unsafeKpi: "Sredni review time uzywany do oceny pojedynczej osoby",
-      risk: "Prowadzi do powierzchownego review i presji na szybkosc zamiast quality decyzji.",
-      saferAlternative: "Review flow na poziomie zespolu + survey o jakosci review",
-      framing: "Review ma byc zdrowym procesem wspolpracy, a nie testem szybkosci."
+      unsafeKpi: "Średni review time używany do oceny pojedynczej osoby",
+      risk: "Prowadzi do powierzchownego review i presji na szybkość zamiast quality decyzji.",
+      saferAlternative: "Review flow na poziomie zespołu + survey o jakości review",
+      framing: "Review ma być zdrowym procesem współpracy, a nie testem szybkości."
     },
     {
-      unsafeKpi: "Publiczne porownywanie wynikow ankiet miedzy osobami",
-      risk: "Niszczy zaufanie do ankiet i obniza szczerosc odpowiedzi.",
+      unsafeKpi: "Publiczne porownywanie wynikow ankiet między osobami",
+      risk: "Niszczy zaufanie do ankiet i obniża szczerość odpowiedzi.",
       saferAlternative: "Anonimowe wyniki team-level z minimalnym progiem odpowiedzi",
-      framing: "Ankiety sluza zrozumieniu procesu, nie ocenie jednostek."
+      framing: "Ankiety służą zrozumieniu procesu, nie ocenie jednostek."
     },
     {
       unsafeKpi: "Defects bez kontekstu typu zmian i release pressure",
-      risk: "Moze karac zespoly, ktore robia najtrudniejsze lub najbardziej ryzykowne wdrozenia.",
+      risk: "Może karać zespoły, które robią najtrudniejsze lub najbardziej ryzykowne wdrożenia.",
       saferAlternative: "Defects + release context + workload + sprint scope",
-      framing: "Jakosc analizujemy razem z trudnoscia i tempem pracy."
+      framing: "Jakość analizujemy razem z trudnoscia i tempem pracy."
     }
   ],
   surveyPolicies: [
     {
-      title: "Staly core Sprint Survey",
+      title: "Stały core Sprint Survey",
       tag: "Core",
       tone: "healthy",
-      description: "Kazdy zespol ma ten sam podstawowy zestaw pytan o workload, focus, clarity, review i tooling. Dzieki temu mozna porownywac trendy w czasie."
+      description: "Każdy zespół ma ten sam podstawowy zestaw pytań o workload, focus, clarity, review i tooling. Dzięki temu można porównywać trendy w czasie."
     },
     {
       title: "Dodatkowe pytania tylko jako warstwa opcjonalna",
       tag: "Optional",
       tone: "caution",
-      description: "Manager moze dodac kilka pytan kontekstowych, ale nie powinien zmieniac calego szkieletu ankiety co sprint."
+      description: "Manager może dodać kilka pytań kontekstowych, ale nie powinien zmieniać całego szkieletu ankiety co sprint."
     },
     {
-      title: "Minimalny prog odpowiedzi",
+      title: "Minimalny próg odpowiedzi",
       tag: "Privacy",
       tone: "healthy",
-      description: "Wyniki ankiety nie sa pokazywane, jesli liczba odpowiedzi jest za mala, zeby zachowac anonimowosc."
+      description: "Wyniki ankiety nie są pokazywane, jeśli liczba odpowiedzi jest za mała, żeby zachować anonimowość."
     },
     {
       title: "Survey fatigue control",
       tag: "Guardrail",
       tone: "caution",
-      description: "System pilnuje, zeby nie dokladac zbyt wielu ankiet w jednym okresie. Sprint Survey jest krotki, a dodatkowe ankiety sa ograniczone."
+      description: "System pilnuje, żeby nie dokładać zbyt wielu ankiet w jednym okresie. Sprint Survey jest krótki, a dodatkowe ankiety są ograniczone."
     }
   ],
   accessModel: [
@@ -1290,8 +1290,8 @@ export const governanceOverview = {
       role: "Engineering Manager",
       scope: "Widok team-level + action plan",
       permissions: [
-        "Moze widziec wyniki zespolu i trendy sprintowe",
-        "Moze tworzyc actions po insightach",
+        "Moze widzieć wyniki zespołu i trendy sprintowe",
+        "Może tworzyć actions po insightach",
         "Nie widzi indywidualnych odpowiedzi pracownikow"
       ]
     },
@@ -1299,17 +1299,17 @@ export const governanceOverview = {
       role: "Team Lead",
       scope: "Widok operacyjny sprintu",
       permissions: [
-        "Moze uruchamiac Sprint Survey",
-        "Moze widziec wynik zespolu po przekroczeniu progu odpowiedzi",
-        "Moze dodawac pytania kontekstowe do release survey"
+        "Może uruchamiać Sprint Survey",
+        "Moze widzieć wynik zespołu po przekroczeniu progu odpowiedzi",
+        "Może dodawać pytania kontekstowe do release survey"
       ]
     },
     {
       role: "People / HR",
       scope: "Widok przekrojowy bez danych osobowych",
       permissions: [
-        "Moze obserwowac trendy miedzy zespolami",
-        "Moze analizowac obszary wellbeing i workload",
+        "Moze obserwowac trendy między zespolami",
+        "Może analizować obszary wellbeing i workload",
         "Nie widzi szczegolow technicznych ani danych repo per osoba"
       ]
     },
@@ -1318,7 +1318,7 @@ export const governanceOverview = {
       scope: "Widok strategiczny",
       permissions: [
         "Widok zagregowany dla organizacji",
-        "Dostep do najwazniejszych insightow i ryzyk",
+        "Dostęp do najważniejszych insightów i ryzyk",
         "Brak wgladu w surowe komentarze jesli nie ma takiej potrzeby"
       ]
     }
@@ -1326,15 +1326,15 @@ export const governanceOverview = {
   privacyRules: [
     {
       title: "Brak widoku indywidualnych ocen",
-      description: "FlowScope nie pokazuje odpowiedzi na poziomie jednej osoby. Produkt dziala na poziomie zespolu i trendu, nie na poziomie rankingu pracownikow."
+      description: "FlowScope nie pokazuje odpowiedzi na poziomie jednej osoby. Produkt działa na poziomie zespołu i trendu, nie na poziomie rankingu pracownikow."
     },
     {
-      title: "Ankiety nie sluza do performance review",
-      description: "W dokumentacji i w samym interfejsie system jasno komunikuje, ze wyniki ankiet nie powinny byc uzywane do oceny rocznej pojedynczych osob."
+      title: "Ankiety nie służą do performance review",
+      description: "W dokumentacji i w samym interfejsie system jasno komunikuje, ze wyniki ankiet nie powinny byc używane do oceny rocznej pojedynczych osób."
     },
     {
-      title: "AI nie trenuje sie na danych klienta bez kontroli",
-      description: "Wersja produktowa powinna jasno okreslac, jak uzywane sa dane i dawac organizacji mozliwosc pelnej kontroli nad prywatnoscia."
+      title: "AI nie trenuje się na danych klienta bez kontroli",
+      description: "Wersja produktowa powinna jasno określać, jak używane są dane i dawać organizacji możliwość pełnej kontroli nad prywatnością."
     }
   ]
 };
